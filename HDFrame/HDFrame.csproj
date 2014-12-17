@@ -62,6 +62,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExtJs\bootstrap.js" />
+    <Content Include="ExtJs\home\all-classes.js" />
+    <Content Include="ExtJs\home\app.js" />
+    <Content Include="ExtJs\home\app\controller\Main.js" />
+    <Content Include="ExtJs\home\app\model\Restaurant.js" />
+    <Content Include="ExtJs\home\app\store\Companies.js" />
+    <Content Include="ExtJs\home\app\store\Examples.js" />
+    <Content Include="ExtJs\home\app\store\Restaurants.js" />
+    <Content Include="ExtJs\home\app\store\States.js" />
+    <Content Include="ExtJs\home\app\store\TreeStore.js" />
+    <Content Include="ExtJs\home\app\view\examples\Example.js" />
+    <Content Include="ExtJs\home\app\view\examples\forms\Contact.js" />
+    <Content Include="ExtJs\home\app\view\examples\forms\Login.js" />
+    <Content Include="ExtJs\home\app\view\examples\forms\Register.js" />
+    <Content Include="ExtJs\home\app\view\examples\grids\BasicGrid.js" />
+    <Content Include="ExtJs\home\app\view\examples\grids\GroupedGrid.js" />
+    <Content Include="ExtJs\home\app\view\examples\grids\GroupedHeaderGrid.js" />
+    <Content Include="ExtJs\home\app\view\examples\grids\LockedGrid.js" />
+    <Content Include="ExtJs\home\app\view\examples\PanelExample.js" />
+    <Content Include="ExtJs\home\app\view\examples\panels\BasicPanel.js" />
+    <Content Include="ExtJs\home\app\view\examples\panels\FramedPanel.js" />
+    <Content Include="ExtJs\home\app\view\examples\tabs\BasicTabs.js" />
+    <Content Include="ExtJs\home\app\view\examples\tabs\FramedTabs.js" />
+    <Content Include="ExtJs\home\app\view\examples\tabs\IconTabs.js" />
+    <Content Include="ExtJs\home\app\view\examples\tabs\TitledTabPanels.js" />
+    <Content Include="ExtJs\home\app\view\examples\toolbars\BasicToolbar.js" />
+    <Content Include="ExtJs\home\app\view\examples\toolbars\DockedToolbar.js" />
+    <Content Include="ExtJs\home\app\view\examples\trees\BasicTree.js" />
+    <Content Include="ExtJs\home\app\view\examples\windows\BasicWindow.js" />
+    <Content Include="ExtJs\home\app\view\Header.js" />
+    <Content Include="ExtJs\home\app\view\List.js" />
+    <Content Include="ExtJs\home\app\view\Viewport.js" />
+    <Content Include="ExtJs\home\resources\css\sink.css" />
+    <Content Include="ExtJs\home\resources\images\logo.png" />
+    <Content Include="ExtJs\home\resources\sass\accessories\readme.txt" />
     <Content Include="ExtJs\ext-all-debug-w-comments.js" />
     <Content Include="ExtJs\ext-all-debug.js" />
     <Content Include="ExtJs\ext-all-dev.js" />
@@ -1766,6 +1800,16 @@
     <Content Include="ExtJs\resources\themes\stylesheets\neptune\default\_widgets.scss" />
     <Content Include="ExtJs\resources\themes\templates\resources\sass\config.rb" />
     <Content Include="ExtJs\resources\themes\templates\resources\sass\my-ext-theme.scss" />
+    <Content Include="ExtJs\home\app.jsb3" />
+    <Content Include="ExtJs\home\resources\config.rb" />
+    <Content Include="ExtJs\home\resources\sass\accessories\scss\config.rb" />
+    <Content Include="ExtJs\home\resources\sass\accessories\scss\_background.scss" />
+    <Content Include="ExtJs\home\resources\sass\accessories\scss\_color.scss" />
+    <Content Include="ExtJs\home\resources\sass\accessories\scss\_google_webfonts.scss" />
+    <Content Include="ExtJs\home\resources\sass\accessories\scss\_pictos.scss" />
+    <Content Include="ExtJs\home\resources\sass\accessories\scss\_shapes.scss" />
+    <Content Include="ExtJs\home\resources\sass\accessories\_all.scss" />
+    <Content Include="ExtJs\home\resources\sass\sink.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1773,6 +1817,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
