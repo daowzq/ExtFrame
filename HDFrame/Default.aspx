@@ -33,9 +33,25 @@
             });
 
             tree.on("itemclick", function (view, rcd, item, idx, event, eOpts) {
-                var dirid = rcd.get('text'); //节点id
-                //  var dirtype = rcd.raw.dirtype; //自定义数据
-                alert(dirid);
+                var dirid = rcd.get('text'); //节点名称
+                // var dirtype = rcd.raw.dirtype; //自定义数据
+
+                var tab = Ext.getCmp("tabpanel");
+                var childItem = tab.query();
+
+                for (var i = 0; i < childItem.length; i++) {
+                    if (childItem[i].xtype == "tab") {  //判断是tab控件
+
+                    }
+
+                }
+                tab.add({
+                    title: dirid,
+                    closable: true,
+                    itemId: "aaaaa"
+                });
+
+                tab.setActiveTab('aaaaa');
             });
 
             //-------布局-------------------------
@@ -55,6 +71,7 @@
                     layout: 'fit',
                     items: [tree]
                 }, {
+                    id: 'tabpanel',
                     margin: '0 0 0 10',
                     region: 'center',
                     plain: true,
