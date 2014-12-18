@@ -14,24 +14,31 @@
                 root: {
                     expanded: true,
                     children: [
-                        { text: "detention", leaf: true },
+                        { text: "首页", leaf: true },
                         {
-                            text: "homework", expanded: true, children: [
-                              { text: "book report", leaf: true },
-                              { text: "alegrbra", leaf: true }
+                            text: "系统权限", expanded: true, children: [
+                              { text: "组织机构", leaf: true },
+                              { text: "用户角色", leaf: true }
                             ]
                         },
-                        { text: "buy lottery tickets", leaf: true }
+                        { text: "个人配置", leaf: true }
                     ]
                 }
             });
 
             var tree = Ext.create('Ext.tree.Panel', {
                 store: store,
+                border: false,
                 rootVisible: false
             });
 
+            tree.on("itemclick", function (view, rcd, item, idx, event, eOpts) {
+                var dirid = rcd.get('text'); //节点id
+                //  var dirtype = rcd.raw.dirtype; //自定义数据
+                alert(dirid);
+            });
 
+            //-------布局-------------------------
             Ext.create('Ext.container.Viewport', {
                 layout: 'border',
                 items: [{
@@ -43,19 +50,22 @@
                 }, {
                     region: 'west',
                     collapsible: true,
-                    title: 'Navigation',
-                    width: 150,
-                    laytout: 'Vbox',
+                    title: '功能列表        ',
+                    width: 180,
+                    layout: 'fit',
                     items: [tree]
                 }, {
+                    margin: '0 0 0 10',
                     region: 'center',
-                    xtype: 'tabpanel', // TabPanel itself has no title
-                    activeTab: 0,      // First tab active by default
-                    items: {
+                    plain: true,
+                    xtype: 'tabpanel',
+                    activeTab: 0,
+                    items: [{
                         title: 'Default Tab',
                         html: 'The first tab\'s content. Others may be added dynamically'
-                    }
+                    }]
                 }, {
+                    margin: '3 0 0 0',
                     height: 40,
                     region: 'south',
                     html: 'Information goes here'
