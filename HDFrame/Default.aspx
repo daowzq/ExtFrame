@@ -6,8 +6,15 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Default</title>
-    <link href="ExtJs/resources/css/ext-all.css" rel="stylesheet" />
+
+    <link href="ExtJs/resources/css/ext-all-neptune.css" rel="stylesheet" />
     <script type="text/javascript" src="ExtJs/ext-all-debug.js"></script>
+    <script src="ExtJs/ext-theme-neptune.js" type="text/javascript"></script>
+    <style type="text/css">
+        .view-cls {
+            background-color: rgb(231,234,236);
+        }
+    </style>
     <script type="text/javascript">
         Ext.onReady(function () {
             var store = Ext.create('Ext.data.TreeStore', {
@@ -43,30 +50,27 @@
                     if (childItem[i].xtype == "tab") {  //判断是tab控件
 
                     }
-
                 }
                 tab.add({
                     title: dirid,
-                    closable: true,
-                    itemId: "aaaaa"
                 });
 
-                tab.setActiveTab('aaaaa');
             });
 
             //-------布局-------------------------
             Ext.create('Ext.container.Viewport', {
                 layout: 'border',
+                cls: 'view-cls',
                 items: [{
                     region: 'north',
-                    height: 50,
-                    html: '<h1 class="x-panel-header">Page Title</h1>',
-                    border: false,
+                    height: 66,
+                    html: '<iframe width="100%" height="100%" id="topFrame" src="../toppage.aspx" name="frameContent" frameborder="0"></iframe>',
+                    border: true,
                     margins: '0 0 5 0'
                 }, {
                     region: 'west',
                     collapsible: true,
-                    title: '功能列表        ',
+                    title: '功能列表',
                     width: 180,
                     layout: 'fit',
                     items: [tree]
@@ -77,10 +81,20 @@
                     plain: true,
                     xtype: 'tabpanel',
                     activeTab: 0,
-                    items: [{
-                        title: 'Default Tab',
-                        html: 'The first tab\'s content. Others may be added dynamically'
-                    }]
+                    minTabWidth: 100,
+                    items: [
+                        {
+                            title: '首页',
+                            html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../defaulttab.aspx" name="frameContent" frameborder="0"></iframe>'
+                        },
+                         {
+
+                             title: '采购管理单',
+                             closable: true,
+                             html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="" name="frameContent" frameborder="0"></iframe>'
+                         }
+                    ]
+
                 }, {
                     margin: '3 0 0 0',
                     height: 40,
