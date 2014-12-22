@@ -53,6 +53,7 @@
                 }
                 tab.add({
                     title: dirid,
+                    closable: true
                 });
 
             });
@@ -88,10 +89,9 @@
                             html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../defaulttab.aspx" name="frameContent" frameborder="0"></iframe>'
                         },
                          {
-
                              title: '采购管理单',
                              closable: true,
-                             html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="" name="frameContent" frameborder="0"></iframe>'
+                             html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../GridDemo.aspx" name="frameContent" frameborder="0"></iframe>'
                          }
                     ]
 
