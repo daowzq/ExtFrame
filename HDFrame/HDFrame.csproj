@@ -43,6 +43,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\library\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -174,6 +177,7 @@
     <Content Include="ExtJs\pkgs\tail.js" />
     <Content Include="ExtJs\plugins\flash\FlashPlugin.swf" />
     <Content Include="ExtJs\plugins\flash\swfobject.js" />
+    <Content Include="Global.asax" />
     <Content Include="GridDemo.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\1.png" />
@@ -197,6 +201,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ComandInfo.cs" />
+    <Compile Include="Common\DataHelper.cs" />
+    <Compile Include="Common\GridJsonStruct.cs" />
+    <Compile Include="Common\GridPagingStruct.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,6 +221,9 @@
     </Compile>
     <Compile Include="DefaultTab.aspx.designer.cs">
       <DependentUpon>DefaultTab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GridDemo.aspx.cs">
       <DependentUpon>GridDemo.aspx</DependentUpon>
