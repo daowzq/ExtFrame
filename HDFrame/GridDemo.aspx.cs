@@ -56,9 +56,15 @@ namespace HDFrame
             if (!string.IsNullOrEmpty(GridPagingStruct.search))
             {
                 var jarr = (JArray)JsonConvert.DeserializeObject(GridPagingStruct.search);
-                string Name = (jarr[0]["Name"] + "").Replace("\"\"", "");
-                string Age = (jarr[1]["Age"] + "").Replace("\"\"", "");
-                string Email = (jarr[2]["Email"] + "").Replace("\"\"", "");
+                dynamic jsonObj = DynamicJson.DynamicJsonConvert.Parse(GridPagingStruct.search);
+
+                //string Name = (jarr[0]["Name"] + "").Replace("\"\"", "");
+                //string Age = (jarr[1]["Age"] + "").Replace("\"\"", "");
+                //string Email = (jarr[2]["Email"] + "").Replace("\"\"", "");
+
+                string Name = jsonObj[0].Name;
+                string Age = jsonObj[1].Age;
+                string Email = jsonObj[2].Email;
 
                 if (!string.IsNullOrEmpty(Name))
                 {
@@ -66,7 +72,7 @@ namespace HDFrame
                 }
                 if (!string.IsNullOrEmpty(Age))
                 {
-                    sql += " and Age=" + Age.Replace("\"", "");
+                    sql += " and Age=" + jsonObj[1].Age;
                 }
                 if (!string.IsNullOrEmpty(Email))
                 {

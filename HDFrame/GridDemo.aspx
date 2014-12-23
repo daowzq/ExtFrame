@@ -56,8 +56,8 @@
                                         }
                                     ]
                                 }]
-                            })
-                            win.show();
+                            }).show();
+
                         }
                     },
         { xtype: 'button', text: '删除', minWidth: 85 },
@@ -83,21 +83,28 @@
                 }
             });
 
-            //查询处理函数
-            function schHandler() {
+            //*查询处理函数,scope
+            function schHandler(eType) {
                 var schBar = Ext.getCmp("schBar");  //当前工具栏ID
                 var store = grid.getStore();        //grid的Store
                 var queryArr = [];                  //查询对象
 
                 var items = schBar.query();
                 for (var i = 0; i < items.length; i++) {
-                    if (items[i] == this) continue;
-                    var queryObj = {};
+                    //当前控件的类型
+                    var currXType = items[i].getXType() + "";
+                    var xtype = "textfield|numberfield|textareafield|combodatefield";
+                    if (currXType == "button" && items[i] == this) continue;
 
-                    //这里处理查询的值
-                    queryObj[items[i].name] = items[i].getValue();
-                    queryArr.push(queryObj);
+                    if (xtype.indexOf(currXType) > -1) {
+                        //这里处理查询的值
+                        var queryObj = {};
+                        queryObj[items[i].name] = items[i].getValue();
+                        queryArr.push(queryObj);
+                    }
                 }
+                //输出调试信息
+                console.log(Ext.encode(queryArr))
                 //查询条件
                 store.getProxy().extraParams.search = Ext.encode(queryArr);
                 store.load();
@@ -130,9 +137,36 @@
                         columns: 4
                     },
                     items: [
-                    { xtype: 'textfield', name: 'Name', fieldLabel: '姓名', labelWidth: 50, labelAlign: "left" },
-                    { xtype: 'textfield', name: 'Age', fieldLabel: '年龄', labelWidth: 50, labelAlign: "left" },
-                    { xtype: 'textfield', name: 'Email', fieldLabel: '邮件', labelWidth: 50, labelAlign: "left" },
+                    {
+                        xtype: 'textfield', name: 'Name', fieldLabel: '姓名', labelWidth: 50, labelAlign: "left",
+                        listeners: {
+                            specialkey: function (field, e) {
+                                if (e.getKey() == Ext.EventObject.ENTER) {
+                                    schHandler.call(this, "");
+                                }
+                            }
+                        }
+                    },
+                    {
+                        xtype: 'textfield', name: 'Age', fieldLabel: '年龄', labelWidth: 50, labelAlign: "left",
+                        listeners: {
+                            specialkey: function (field, e) {
+                                if (e.getKey() == Ext.EventObject.ENTER) {
+                                    schHandler.call(this, "");
+                                }
+                            }
+                        }
+                    },
+                    {
+                        xtype: 'textfield', name: 'Email', fieldLabel: '邮件', labelWidth: 50, labelAlign: "left",
+                        listeners: {
+                            specialkey: function (field, e) {
+                                if (e.getKey() == Ext.EventObject.ENTER) {
+                                    schHandler.call(this, "");
+                                }
+                            }
+                        }
+                    },
                     { xtype: 'button', text: '查询', handler: schHandler }
                     ]
                 }],
