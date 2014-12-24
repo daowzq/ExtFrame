@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,20 @@ namespace HDFrame.Common
 {
     public class BasePage : Page
     {
+        private Hashtable pageState = new Hashtable();
+        private PageStateContainer containter;
+
+        #region 属性
+        /// <summary>
+        /// 页面状态，用于前后台传输数据
+        /// </summary>
+        public virtual Hashtable PageState
+        {
+            get { return pageState; }
+        }
+
+        #endregion
+
         #region ASP.NET 事件
 
         /// <summary>
@@ -19,6 +34,13 @@ namespace HDFrame.Common
         {
             base.OnInit(e);
             this.EnableViewState = false;   // 禁用ViewState
+
+            if (this.containter == null && Form != null)
+            {
+                this.containter = new PageStateContainer();
+                this.Form.Controls.Add(containter);
+            }
+
         }
 
         /// <summary>
@@ -42,6 +64,17 @@ namespace HDFrame.Common
         /// <param name="e"></param>
         protected virtual void Page_PreRender(object sender, EventArgs e)
         {
+            if (containter != null)
+            {
+                containter.Value = this.packPageState();
+            }
+        }
+        /// <summary>
+        /// 打包页面信息，并将其绑定到隐藏的服务器端控件上
+        /// </summary>
+        private string packPageState()
+        {
+            return DynamicJson.DynamicJsonConvert.SerializeObject(this.pageState);
         }
 
         //去缓存

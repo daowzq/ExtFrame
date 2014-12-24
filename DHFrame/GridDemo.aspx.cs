@@ -12,11 +12,13 @@ using Newtonsoft.Json.Linq;
 
 namespace HDFrame
 {
-    public partial class GridDemo : Page
+    public partial class GridDemo : BasePage
     {
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.PageState.Add("IsCanDelete", "0"); 
+
             if (Request["action"] + "" == "ajax")
             {
                 Response.Write(ResponseJsonBySQL());
@@ -40,7 +42,6 @@ namespace HDFrame
                 Response.End();
             }
         }
-
 
 
         /// <summary>

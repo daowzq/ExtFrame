@@ -67,9 +67,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\common.css" />
-    <Content Include="css\login.css" />
-    <Content Include="css\style.css" />
+    <Content Include="Css\common.css" />
+    <Content Include="Css\login.css" />
+    <Content Include="Css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultTab.aspx" />
     <Content Include="ExtJs\bootstrap.js" />
@@ -200,6 +200,7 @@
     <Content Include="images\per.png" />
     <Content Include="js\body_width_height.js" />
     <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="LeftPage.aspx" />
     <Content Include="Lib\DynamicJson.dll" />
     <Content Include="Lib\Newtonsoft.Json.dll" />
     <Content Include="Lib\Newtonsoft.Json.xml" />
@@ -214,6 +215,7 @@
     <Compile Include="Common\DataHelper.cs" />
     <Compile Include="Common\GridJsonStruct.cs" />
     <Compile Include="Common\GridPagingStruct.cs" />
+    <Compile Include="Common\PageStateContainer.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +239,13 @@
     </Compile>
     <Compile Include="GridDemo.aspx.designer.cs">
       <DependentUpon>GridDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeftPage.aspx.cs">
+      <DependentUpon>LeftPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeftPage.aspx.designer.cs">
+      <DependentUpon>LeftPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master\Grid.Master.cs">
       <DependentUpon>Grid.Master</DependentUpon>

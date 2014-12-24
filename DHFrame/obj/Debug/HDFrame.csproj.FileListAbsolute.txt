@@ -1,0 +1,16 @@
+D:\Project\ExtFrame\HDFrame\bin\HDFrame.dll
+D:\Project\ExtFrame\HDFrame\bin\HDFrame.pdb
+D:\Project\ExtFrame\HDFrame\obj\Debug\HDFrame.csprojResolveAssemblyReference.cache
+D:\Project\ExtFrame\HDFrame\obj\Debug\HDFrame.dll
+D:\Project\ExtFrame\HDFrame\obj\Debug\HDFrame.pdb
+D:\Project\ExtFrame\HDFrame\bin\Newtonsoft.Json.dll
+D:\Project\ExtFrame\HDFrame\bin\Newtonsoft.Json.xml
+D:\Project\ExtFrame\HDFrame\bin\DynamicJson.dll
+D:\Project\ExtFrame\DHFrame\bin\HDFrame.dll
+D:\Project\ExtFrame\DHFrame\bin\HDFrame.pdb
+D:\Project\ExtFrame\DHFrame\bin\DynamicJson.dll
+D:\Project\ExtFrame\DHFrame\bin\Newtonsoft.Json.dll
+D:\Project\ExtFrame\DHFrame\bin\Newtonsoft.Json.xml
+D:\Project\ExtFrame\DHFrame\obj\Debug\HDFrame.csprojResolveAssemblyReference.cache
+D:\Project\ExtFrame\DHFrame\obj\Debug\HDFrame.dll
+D:\Project\ExtFrame\DHFrame\obj\Debug\HDFrame.pdb

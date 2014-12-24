@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDFrame", "HDFrame\HDFrame.csproj", "{AAD76582-BDF1-4FC2-A2CA-BB3C77E1999B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDFrame", "DHFrame\HDFrame.csproj", "{AAD76582-BDF1-4FC2-A2CA-BB3C77E1999B}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -9,9 +9,9 @@ Global
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://192.168.1.253:8080/tfs/dahuisoft
 		SccLocalPath0 = .
-		SccProjectUniqueName1 = HDFrame\\HDFrame.csproj
-		SccProjectName1 = HDFrame
-		SccLocalPath1 = HDFrame
+		SccProjectUniqueName1 = DHFrame\\HDFrame.csproj
+		SccProjectName1 = ../../DHFrame
+		SccLocalPath1 = DHFrame
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
