@@ -114,7 +114,7 @@
                     region: 'center',
                     plain: true,
                     xtype: 'tabpanel',
-                    activeTab: 0,
+                    activeTab: 2,
                     minTabWidth: 100,
                     items: [
                         {
@@ -125,7 +125,12 @@
                              title: '采购管理单',
                              closable: true,
                              html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../GridDemo.aspx" name="frameContent" frameborder="0"></iframe>'
-                         }
+                         },
+                           {
+                               title: '商品信息',
+                               closable: true,
+                               html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../ProductDemo.aspx" name="frameContent" frameborder="0"></iframe>'
+                           }
                     ]
 
                 }, {
