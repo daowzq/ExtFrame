@@ -17,12 +17,8 @@ namespace HDFrame
 {
     public partial class GridDemo : BasePage
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            Employee
-
             if (Request["action"] + "" == "ajax")
             {
                 Response.Write(ResponseJsonBySQL());
