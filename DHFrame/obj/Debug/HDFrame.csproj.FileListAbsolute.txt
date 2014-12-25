@@ -14,3 +14,14 @@ D:\Project\ExtFrame\DHFrame\bin\Newtonsoft.Json.xml
 D:\Project\ExtFrame\DHFrame\obj\Debug\HDFrame.csprojResolveAssemblyReference.cache
 D:\Project\ExtFrame\DHFrame\obj\Debug\HDFrame.dll
 D:\Project\ExtFrame\DHFrame\obj\Debug\HDFrame.pdb
+D:\Project\ExtFrame\DHFrame\bin\Castle.ActiveRecord.dll
+D:\Project\ExtFrame\DHFrame\bin\Castle.Components.Validator.dll
+D:\Project\ExtFrame\DHFrame\bin\Castle.Core.dll
+D:\Project\ExtFrame\DHFrame\bin\Iesi.Collections.dll
+D:\Project\ExtFrame\DHFrame\bin\log4net.dll
+D:\Project\ExtFrame\DHFrame\bin\Lucene.Net.dll
+D:\Project\ExtFrame\DHFrame\bin\NHibernate.ByteCode.Castle.dll
+D:\Project\ExtFrame\DHFrame\bin\NHibernate.dll
+D:\Project\ExtFrame\DHFrame\bin\NHibernate.Search.dll
+D:\Project\ExtFrame\DHFrame\bin\DataModel.dll
+D:\Project\ExtFrame\DHFrame\bin\DataModel.pdb

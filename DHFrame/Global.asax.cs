@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Castle.ActiveRecord;
+using Castle.ActiveRecord.Framework;
+using DataModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
@@ -17,7 +21,9 @@ namespace HDFrame
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            IConfigurationSource source = System.Configuration.ConfigurationSettings.GetConfig("activerecord") as IConfigurationSource;
+            Assembly ably = Assembly.Load("DataModel"); //数据集集合
+            ActiveRecordStarter.Initialize(ably, source);
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

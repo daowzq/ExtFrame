@@ -9,6 +9,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using HDFrame.Common;
 using Newtonsoft.Json.Linq;
+using DataModel;
+using Castle.ActiveRecord;
+using Castle.ActiveRecord.Framework;
 
 namespace HDFrame
 {
@@ -17,7 +20,8 @@ namespace HDFrame
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.PageState.Add("IsCanDelete", "0"); 
+
+            Employee
 
             if (Request["action"] + "" == "ajax")
             {

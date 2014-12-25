@@ -1,4 +1,5 @@
-﻿using HDFrame.Common;
+﻿using DataModel;
+using HDFrame.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
@@ -16,7 +17,9 @@ namespace HDFrame
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.PageState.Add("IsCanDelete", "0");
+
+           
+
 
             if (Request["action"] + "" == "ajax")
             {

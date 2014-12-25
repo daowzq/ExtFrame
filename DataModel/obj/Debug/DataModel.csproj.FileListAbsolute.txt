@@ -1,0 +1,16 @@
+D:\Project\ExtFrame\DataModel\bin\Debug\DataModel.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\DataModel.pdb
+D:\Project\ExtFrame\DataModel\bin\Debug\Castle.ActiveRecord.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\Castle.Components.Validator.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\Castle.Core.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\Iesi.Collections.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\log4net.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\Lucene.Net.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\Newtonsoft.Json.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\NHibernate.ByteCode.Castle.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\NHibernate.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\NHibernate.Search.dll
+D:\Project\ExtFrame\DataModel\bin\Debug\Newtonsoft.Json.xml
+D:\Project\ExtFrame\DataModel\obj\Debug\DataModel.dll
+D:\Project\ExtFrame\DataModel\obj\Debug\DataModel.pdb
+D:\Project\ExtFrame\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
