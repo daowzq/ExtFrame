@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModelHelper.cs" />
     <Compile Include="Generate\Employee.cs" />
     <Compile Include="IDGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
