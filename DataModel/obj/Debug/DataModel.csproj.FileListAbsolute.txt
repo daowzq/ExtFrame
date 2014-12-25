@@ -13,4 +13,3 @@ D:\Project\ExtFrame\DataModel\bin\Debug\NHibernate.Search.dll
 D:\Project\ExtFrame\DataModel\bin\Debug\Newtonsoft.Json.xml
 D:\Project\ExtFrame\DataModel\obj\Debug\DataModel.dll
 D:\Project\ExtFrame\DataModel\obj\Debug\DataModel.pdb
-D:\Project\ExtFrame\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache

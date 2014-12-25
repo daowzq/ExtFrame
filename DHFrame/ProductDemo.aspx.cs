@@ -18,9 +18,6 @@ namespace HDFrame
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
-
-
             if (Request["action"] + "" == "ajax")
             {
                 Response.Write(ResponseJsonBySQL());

@@ -5,31 +5,31 @@
 namespace DataModel
 {
     using Castle.ActiveRecord;
-    
-    
+
+
     [ActiveRecord("Employee")]
     public class Employee : ActiveRecordBase
     {
-        
+
         private string _iD;
-        
+
         private string _name;
-        
+
         private int _age;
-        
+
         private string _job;
-        
+
         private string _email;
-        
+
         private string _postion;
-        
+
         private System.DateTime _createTime;
-        
+
         private string _createId;
-        
+
         private string _createName;
-        
-        [PrimaryKey(PrimaryKeyType.Native)]
+
+        [PrimaryKey(PrimaryKeyType.Custom, CustomGenerator = typeof(IDGenerator))]
         public string ID
         {
             get
@@ -41,7 +41,7 @@ namespace DataModel
                 this._iD = value;
             }
         }
-        
+
         [Property()]
         public string Name
         {
@@ -54,7 +54,7 @@ namespace DataModel
                 this._name = value;
             }
         }
-        
+
         [Property()]
         public int Age
         {
@@ -67,7 +67,7 @@ namespace DataModel
                 this._age = value;
             }
         }
-        
+
         [Property()]
         public string Job
         {
@@ -80,7 +80,7 @@ namespace DataModel
                 this._job = value;
             }
         }
-        
+
         [Property()]
         public string Email
         {
@@ -93,7 +93,7 @@ namespace DataModel
                 this._email = value;
             }
         }
-        
+
         [Property()]
         public string Postion
         {
@@ -106,7 +106,7 @@ namespace DataModel
                 this._postion = value;
             }
         }
-        
+
         [Property()]
         public System.DateTime CreateTime
         {
@@ -119,7 +119,7 @@ namespace DataModel
                 this._createTime = value;
             }
         }
-        
+
         [Property()]
         public string CreateId
         {
@@ -132,7 +132,7 @@ namespace DataModel
                 this._createId = value;
             }
         }
-        
+
         [Property()]
         public string CreateName
         {
@@ -145,17 +145,17 @@ namespace DataModel
                 this._createName = value;
             }
         }
-        
+
         public static void DeleteAll()
         {
             ActiveRecordBase.DeleteAll(typeof(Employee));
         }
-        
+
         public static Employee[] FindAll()
         {
             return ((Employee[])(ActiveRecordBase.FindAll(typeof(Employee))));
         }
-        
+
         public static Employee Find(string ID)
         {
             return ((Employee)(ActiveRecordBase.FindByPrimaryKey(typeof(Employee), ID)));
