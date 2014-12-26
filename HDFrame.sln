@@ -5,19 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDFrame", "DHFrame\HDFrame.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{C1F4578D-D3E5-41DA-B8AC-72021B313E45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{C8E3C221-8FB0-4852-AFB8-2154AA52DF1A}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://192.168.1.253:8080/tfs/dahuisoft
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = DHFrame\\HDFrame.csproj
-		SccProjectName1 = ../../DHFrame
-		SccLocalPath1 = DHFrame
-		SccProjectUniqueName2 = DataModel\\DataModel.csproj
-		SccProjectName2 = DataModel
-		SccLocalPath2 = DataModel
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -31,6 +21,10 @@ Global
 		{C1F4578D-D3E5-41DA-B8AC-72021B313E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1F4578D-D3E5-41DA-B8AC-72021B313E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1F4578D-D3E5-41DA-B8AC-72021B313E45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E3C221-8FB0-4852-AFB8-2154AA52DF1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E3C221-8FB0-4852-AFB8-2154AA52DF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E3C221-8FB0-4852-AFB8-2154AA52DF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E3C221-8FB0-4852-AFB8-2154AA52DF1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
