@@ -25,3 +25,9 @@ D:\Project\ExtFrame\DHFrame\bin\NHibernate.dll
 D:\Project\ExtFrame\DHFrame\bin\NHibernate.Search.dll
 D:\Project\ExtFrame\DHFrame\bin\DataModel.dll
 D:\Project\ExtFrame\DHFrame\bin\DataModel.pdb
+D:\Project\ExtFrame\DHFrame\bin\Ext.Net.dll
+D:\Project\ExtFrame\DHFrame\bin\Ext.Net.Utilities.dll
+D:\Project\ExtFrame\DHFrame\bin\Transformer.NET.dll
+D:\Project\ExtFrame\DHFrame\bin\Ext.Net.xml
+D:\Project\ExtFrame\DHFrame\bin\Ext.Net.Utilities.xml
+D:\Project\ExtFrame\DHFrame\bin\Transformer.NET.xml

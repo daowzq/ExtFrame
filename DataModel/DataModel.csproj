@@ -52,9 +52,6 @@
     <Reference Include="Lucene.Net">
       <HintPath>..\DHFrame\Lib\Lucene.Net.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\DHFrame\Lib\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\DHFrame\Lib\NHibernate.dll</HintPath>
     </Reference>
@@ -74,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataModelHelper.cs" />
+    <Compile Include="DataPaging.cs" />
     <Compile Include="Generate\Employee.cs" />
     <Compile Include="IDGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

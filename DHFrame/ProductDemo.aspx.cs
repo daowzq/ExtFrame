@@ -3,6 +3,7 @@ using HDFrame.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+using NHibernate.Criterion;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -52,7 +53,8 @@ namespace HDFrame
         {
             //if (string.IsNullOrEmpty(sql)) return null;
 
-            string sql = "select * from Employee where 1=1 ";
+
+            List<ICriterion> exps = new List<ICriterion>();
 
             //查询数据时
             if (!string.IsNullOrEmpty(GridPagingStruct.search))
@@ -60,34 +62,28 @@ namespace HDFrame
                 var jarr = (JArray)JsonConvert.DeserializeObject(GridPagingStruct.search);
                 dynamic jsonObj = DynamicJson.DynamicJsonConvert.Parse(GridPagingStruct.search);
 
-                //string Name = (jarr[0]["Name"] + "").Replace("\"\"", "");
-                //string Age = (jarr[1]["Age"] + "").Replace("\"\"", "");
-                //string Email = (jarr[2]["Email"] + "").Replace("\"\"", "");
-
                 string Name = jsonObj[0].Name;
                 string Age = jsonObj[1].Age;
                 string Email = jsonObj[2].Email;
 
                 if (!string.IsNullOrEmpty(Name))
                 {
-                    sql += " and Name like '%" + Name + "%' ";
+                    exps.Add((ICriterion)Expression.Like("Name", Name));
                 }
                 if (!string.IsNullOrEmpty(Age))
                 {
-                    sql += " and Age=" + jsonObj[1].Age;
+                    exps.Add((ICriterion)Expression.Eq("Age", int.Parse(Age)));
                 }
                 if (!string.IsNullOrEmpty(Email))
                 {
-                    sql += " and Email like '%" + Email + "%' ";
+                    exps.Add((ICriterion)Expression.Like("Email", Email));
                 }
             }
-            sql = sql + " order by CreateTime desc";
-            DataSet ds = DBHelper.DbHelperSQL.Query(sql);
-            DataTable dt = ds.Tables[0];
-            DataTable newDt = GetPagedTable(dt, GridPagingStruct.Page, GridPagingStruct.PageSize);
-            GridJsonStruct gjs = new GridJsonStruct(newDt, dt.Rows.Count);
 
-            return JsonConvert.SerializeObject(gjs, new JsonConverter[] { new DataTableConverter(), new IsoDateTimeConverter() });
+            var list = DataPaging.FindAll<Employee>(GridPagingStruct.Page, GridPagingStruct.PageSize,
+                                                   new Order[] { new Order("CreateTime", false) }, exps.ToArray());
+            GridJsonStruct gjs = new GridJsonStruct(list, DataPaging.GetCount<Employee>());
+            return DynamicJson.DynamicJsonConvert.SerializeObject(gjs);
         }
 
 

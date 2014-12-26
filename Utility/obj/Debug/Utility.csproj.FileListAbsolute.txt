@@ -4,3 +4,9 @@ D:\ProjectDoem\ExtFrame\Utility\bin\Debug\Utility.pdb
 D:\ProjectDoem\ExtFrame\Utility\bin\Debug\itextsharp.dll
 D:\ProjectDoem\ExtFrame\Utility\obj\Debug\Utility.dll
 D:\ProjectDoem\ExtFrame\Utility\obj\Debug\Utility.pdb
+D:\Project\ExtFrame\Utility\bin\Debug\Utility.dll
+D:\Project\ExtFrame\Utility\bin\Debug\Utility.pdb
+D:\Project\ExtFrame\Utility\bin\Debug\itextsharp.dll
+D:\Project\ExtFrame\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+D:\Project\ExtFrame\Utility\obj\Debug\Utility.dll
+D:\Project\ExtFrame\Utility\obj\Debug\Utility.pdb

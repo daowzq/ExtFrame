@@ -11,8 +11,8 @@ namespace HDFrame.Common
     /// </summary>
     public class GridJsonStruct
     {
-        public readonly int total;
-        public readonly object items;
+        private int _total;
+        private object _items;
 
         /// <summary>
         /// 
@@ -23,7 +23,7 @@ namespace HDFrame.Common
         {
             if (dt != null)
                 this.items = dt;
-            total = _total;
+            this.total = _total;
         }
 
         /// <summary>
@@ -35,27 +35,35 @@ namespace HDFrame.Common
         {
             if (obj != null)
                 this.items = obj;
-            total = _total;
+            this.total = _total;
         }
 
         /// <summary>
         /// 获取条数
         /// </summary>
-        public int Total
+        public int total
         {
             get
             {
-                return total;
+                return _total;
+            }
+            set
+            {
+                _total = value;
             }
         }
         /// <summary>
         /// 获取数据集
         /// </summary>
-        public object Items
+        public object items
         {
             get
             {
-                return items;
+                return _items;
+            }
+            set
+            {
+                _items = value;
             }
         }
         /// <summary>
