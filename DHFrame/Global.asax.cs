@@ -16,14 +16,14 @@ namespace HDFrame
 
         protected void Application_Start(object sender, EventArgs e)
         {
-
+            IConfigurationSource source = System.Configuration.ConfigurationSettings.GetConfig("activerecord") as IConfigurationSource;
+            Assembly ably = Assembly.Load("DataModel"); //数据集集合
+            ActiveRecordStarter.Initialize(ably, source);
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            IConfigurationSource source = System.Configuration.ConfigurationSettings.GetConfig("activerecord") as IConfigurationSource;
-            Assembly ably = Assembly.Load("DataModel"); //数据集集合
-            ActiveRecordStarter.Initialize(ably, source);
+          
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

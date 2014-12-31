@@ -75,7 +75,10 @@
             $('.left_nav').find("li").bind('click', function () {
                 $(this).addClass("active").siblings("li").removeClass("active");
                 var activeindex = $(this).index();
-                if (activeindex == 1) {
+                if (activeindex == 0) {
+                    window.open("mxGraph.aspx", '_blank', 'width=' + window.screen.availWidth + ',height=800,scrollbars=1');
+                }
+                else if (activeindex == 1) {
                     $('.nav_dropdown').hide();
                     $('.nav_dr1').show();
                 } else if (activeindex == 2) {

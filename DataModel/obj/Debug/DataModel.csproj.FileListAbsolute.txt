@@ -27,3 +27,4 @@ D:\ProjectDoem\ExtFrame\DataModel\bin\Debug\Newtonsoft.Json.xml
 D:\ProjectDoem\ExtFrame\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
 D:\ProjectDoem\ExtFrame\DataModel\obj\Debug\DataModel.dll
 D:\ProjectDoem\ExtFrame\DataModel\obj\Debug\DataModel.pdb
+D:\Project\ExtFrame\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
