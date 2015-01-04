@@ -72,7 +72,11 @@
 
             var addVertex = function (icon, w, h, style) {
                 var vertex = new mxCell(null, new mxGeometry(0, 0, w, h), style);
+<<<<<<< HEAD
                 vertex.setVertex(true); //设置顶点
+=======
+                vertex.setVertex(true);
+>>>>>>> d027b08b9c65b6805371ee8b3cc64f70b017baaf
 
                 addToolbarItem(graph, toolbar, vertex, icon);
             };
@@ -90,7 +94,11 @@
                 if (!graph.isSelectionEmpty()) {
                     // Creates a copy of the selection array to preserve its state
                     var cells = graph.getSelectionCells();
+<<<<<<< HEAD
                     var bounds = graph.getView().getBounds(cells);//返回边界
+=======
+                    var bounds = graph.getView().getBounds(cells);
+>>>>>>> d027b08b9c65b6805371ee8b3cc64f70b017baaf
 
 
                     // Function that is executed when the image is dropped on
@@ -103,14 +111,21 @@
                     //    var dx = pt.x - bounds.x;
                     //    var dy = pt.y - bounds.y;
 
+<<<<<<< HEAD
                     //    var clones = graph.importCells(cells, dx, dy); //导入cell 
+=======
+                    //    var clones = graph.importCells(cells, dx, dy);
+>>>>>>> d027b08b9c65b6805371ee8b3cc64f70b017baaf
                     //    graph.setSelectionCells(clones);
                     //}
 
                     //// Creates the image which is used as the drag icon (preview)
                     //var img = toolbar.addMode(null, 'mxGraph/examples/editors/images/outline.gif', funct);
+<<<<<<< HEAD
                     //Configures the given DOM element to act as a drag source for the specified graph.
 
+=======
+>>>>>>> d027b08b9c65b6805371ee8b3cc64f70b017baaf
                     //mxUtils.makeDraggable(img, graph, funct);
                     graph.removeCells();
                 }
@@ -198,6 +213,7 @@
                 // Updates the display
                 graph.getModel().endUpdate();
             }
+<<<<<<< HEAD
 
             // Handles cursor keys
             var nudge = function (keyCode) {
@@ -205,6 +221,15 @@
                     var dx = 0;
                     var dy = 0;
 
+=======
+
+            // Handles cursor keys
+            var nudge = function (keyCode) {
+                if (!graph.isSelectionEmpty()) {
+                    var dx = 0;
+                    var dy = 0;
+
+>>>>>>> d027b08b9c65b6805371ee8b3cc64f70b017baaf
                     if (keyCode == 37) {
                         dx = -1;
                     }
@@ -213,6 +238,7 @@
                     }
                     else if (keyCode == 39) {
                         dx = 1;
+<<<<<<< HEAD
                     }
                     else if (keyCode == 40) {
                         dy = 1;
@@ -255,17 +281,69 @@
             //这通常是根节点的第一个子节点
             var parent = graph.getDefaultParent();
 
+=======
+                    }
+                    else if (keyCode == 40) {
+                        dy = 1;
+                    }
+
+                    graph.moveCells(graph.getSelectionCells(), dx, dy);
+                }
+            };
+
+            // Transfer initial focus to graph container for keystroke handling
+            graph.container.focus();
+
+            // Handles keystroke events
+            var keyHandler = new mxKeyHandler(graph);
+
+            // Ignores enter keystroke. Remove this line if you want the
+            // enter keystroke to stop editing
+            keyHandler.enter = function () { };
+
+            keyHandler.bindKey(37, function () {
+                nudge(37);
+            });
+
+            keyHandler.bindKey(38, function () {
+                nudge(38);
+            });
+
+            keyHandler.bindKey(39, function () {
+                nudge(39);
+            });
+
+            keyHandler.bindKey(40, function () {
+                nudge(40);
+            });
+        }
+
+        //第一个测试
+        function text1(graph, model) {
+
+            //这通常是根节点的第一个子节点
+            var parent = graph.getDefaultParent();
+
+>>>>>>> d027b08b9c65b6805371ee8b3cc64f70b017baaf
             // Adds cells to the model in a single step
             model.beginUpdate();
             try {
                 var v1 = graph.insertVertex(parent, null, 'Hello,', 20, 20, 80, 30);
                 var v2 = graph.insertVertex(parent, null, 'World!', 200, 150, 80, 30);
                 var e1 = graph.insertEdge(parent, null, '', v1, v2);
+<<<<<<< HEAD
             }
             finally {
                 //更新显示
                 model.endUpdate();
             }
+=======
+            }
+            finally {
+                //更新显示
+                model.endUpdate();
+            }
+>>>>>>> d027b08b9c65b6805371ee8b3cc64f70b017baaf
 
             //实例化对象到xml中
             //var object = new Object();
