@@ -103,12 +103,14 @@
                     //    var dx = pt.x - bounds.x;
                     //    var dy = pt.y - bounds.y;
 
-                    //    var clones = graph.importCells(cells, dx, dy);
+                    //    var clones = graph.importCells(cells, dx, dy); //导入cell 
                     //    graph.setSelectionCells(clones);
                     //}
 
                     //// Creates the image which is used as the drag icon (preview)
                     //var img = toolbar.addMode(null, 'mxGraph/examples/editors/images/outline.gif', funct);
+                    //Configures the given DOM element to act as a drag source for the specified graph.
+
                     //mxUtils.makeDraggable(img, graph, funct);
                     graph.removeCells();
                 }
