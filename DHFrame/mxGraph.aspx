@@ -1,12 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mxGraph.aspx.cs" Inherits="HDFrame.gxGraph" %>
 
-<!--
-  $Id: toolbar.html,v 1.15 2011-04-28 15:31:10 gaudenz Exp $
-  Copyright (c) 2006-2010, JGraph Ltd
-  
-  Toolbar example for mxGraph. This example demonstrates using
-  existing cells as templates for creating new cells.
--->
+
 <html>
 <head>
     <title>Toolbar example for mxGraph</title>
@@ -14,26 +8,18 @@
     <!-- Sets the basepath for the library if not in same directory -->
     <script type="text/javascript">
         mxBasePath = 'mxGraph/src';
-	</script>
+    </script>
 
     <!-- Loads and initializes the library -->
     <script src="mxGraph/debug/js/mxClient.js"></script>
     <!-- Example code -->
     <script type="text/javascript">
-        // Program starts here. Creates a sample graph in the
-        // DOM node with the specified ID. This function is invoked
-        // from the onLoad event handler of the document (see below).
+
         function main() {
             // Defines an icon for creating new connections in the connection handler.
             // This will automatically disable the highlighting of the source vertex.
             mxConnectionHandler.prototype.connectImage = new mxImage('mxGraph/examples/images/connector.gif', 16, 16);
 
-            // Checks if browser is supported
-            if (!mxClient.isBrowserSupported()) {
-                // Displays an error message if the browser is
-                // not supported.
-                //  mxUtils.error('Browser is not supported!', 200, false);
-            }
             {
                 // Creates the div for the toolbar
                 var tbContainer = document.createElement('div');
@@ -48,9 +34,9 @@
                 document.body.appendChild(tbContainer);
 
                 // Workaround for Internet Explorer ignoring certain styles
-                if (mxClient.IS_IE) {
-                    new mxDivResizer(tbContainer);
-                }
+                //if (mxClient.IS_IE) {
+                //  new mxDivResizer(tbContainer);
+                //}
 
                 // Creates new toolbar without event processing
                 var toolbar = new mxToolbar(tbContainer);
@@ -60,8 +46,8 @@
                 container = document.createElement('div');
                 container.style.position = 'absolute';
                 container.style.overflow = 'hidden';
-                container.style.left = '24px';
-                container.style.top = '26px';
+                container.style.left = '50px';
+                container.style.top = '30px';
                 container.style.right = '0px';
                 container.style.bottom = '0px';
                 container.style.background = 'url("mxGraph/examples/editors/images/grid.gif")';
@@ -69,9 +55,9 @@
                 document.body.appendChild(container);
 
                 // Workaround for Internet Explorer ignoring certain styles
-                if (mxClient.IS_IE) {
-                    new mxDivResizer(container);
-                }
+                //if (mxClient.IS_IE) {
+                //    new mxDivResizer(container);
+                //}
 
                 // Creates the model and the graph inside the container
                 // using the fastest rendering available on the browser
@@ -100,31 +86,33 @@
                 addVertex('mxGraph/examples/editors/images/triangle.gif', 40, 40, 'shape=triangle');
                 addVertex('mxGraph/examples/editors/images/cylinder.gif', 40, 40, 'shape=cylinder');
                 addVertex('mxGraph/examples/editors/images/actor.gif', 30, 40, 'shape=actor');
-                toolbar.addLine();
+                //toolbar.addLine();
 
-                var button = mxUtils.button('Create toolbar entry from selection', function (evt) {
+                var button = mxUtils.button('删除', function (evt) {
                     if (!graph.isSelectionEmpty()) {
                         // Creates a copy of the selection array to preserve its state
                         var cells = graph.getSelectionCells();
                         var bounds = graph.getView().getBounds(cells);
 
+
                         // Function that is executed when the image is dropped on
                         // the graph. The cell argument points to the cell under
                         // the mousepointer if there is one.
-                        var funct = function (graph, evt, cell) {
-                            graph.stopEditing(false);
+                        //var funct = function (graph, evt, cell) {
+                        //    graph.stopEditing(false);
 
-                            var pt = graph.getPointForEvent(evt);
-                            var dx = pt.x - bounds.x;
-                            var dy = pt.y - bounds.y;
+                        //    var pt = graph.getPointForEvent(evt);
+                        //    var dx = pt.x - bounds.x;
+                        //    var dy = pt.y - bounds.y;
 
-                            var clones = graph.importCells(cells, dx, dy);
-                            graph.setSelectionCells(clones);
-                        }
+                        //    var clones = graph.importCells(cells, dx, dy);
+                        //    graph.setSelectionCells(clones);
+                        //}
 
-                        // Creates the image which is used as the drag icon (preview)
-                        var img = toolbar.addMode(null, 'editors/images/outline.gif', funct);
-                        mxUtils.makeDraggable(img, graph, funct);
+                        //// Creates the image which is used as the drag icon (preview)
+                        //var img = toolbar.addMode(null, 'mxGraph/examples/editors/images/outline.gif', funct);
+                        //mxUtils.makeDraggable(img, graph, funct);
+                        graph.removeCells();
                     }
                 });
 
@@ -158,7 +146,7 @@
             mxUtils.makeDraggable(img, graph, funct);
         }
 
-	</script>
+    </script>
 </head>
 
 <!-- Calls the main function after the page has loaded. Container is dynamically created. -->
