@@ -228,6 +228,7 @@
     <Content Include="ExtJs\plugins\flash\FlashPlugin.swf" />
     <Content Include="ExtJs\plugins\flash\swfobject.js" />
     <Content Include="Global.asax" />
+    <Content Include="GraphEditor.aspx" />
     <Content Include="GridDemo.aspx" />
     <Content Include="mxGraph.aspx" />
     <Content Include="Home.aspx" />
@@ -747,6 +748,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GraphEditor.aspx.cs">
+      <DependentUpon>GraphEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GraphEditor.aspx.designer.cs">
+      <DependentUpon>GraphEditor.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridDemo.aspx.cs">
       <DependentUpon>GridDemo.aspx</DependentUpon>
