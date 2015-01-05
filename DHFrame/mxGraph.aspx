@@ -45,7 +45,7 @@
             container.style.position = 'absolute';
             container.style.overflow = 'hidden';
             container.style.left = '50px';
-            container.style.top = '30px';
+            container.style.top = '40px';
             container.style.right = '0px';
             container.style.bottom = '0px';
             container.style.background = 'url("mxGraph/examples/editors/images/grid.gif")';
@@ -72,10 +72,7 @@
 
             var addVertex = function (icon, w, h, style) {
                 var vertex = new mxCell(null, new mxGeometry(0, 0, w, h), style);
-
                 vertex.setVertex(true); //设置顶点
-
-
                 addToolbarItem(graph, toolbar, vertex, icon);
             };
 
@@ -86,13 +83,13 @@
             addVertex('mxGraph/examples/editors/images/triangle.gif', 40, 40, 'shape=triangle');
             addVertex('mxGraph/examples/editors/images/cylinder.gif', 40, 40, 'shape=cylinder');
             addVertex('mxGraph/examples/editors/images/actor.gif', 30, 40, 'shape=actor');
-            //toolbar.addLine();
+            addVertex('mxGraph/examples/editors/images/straight.gif', 30, 40, 'shape=line');
+            //toolbar.addLine(); //添加分割线
 
             var button = mxUtils.button('删除', function (evt) {
                 if (!graph.isSelectionEmpty()) {
                     // Creates a copy of the selection array to preserve its state
                     var cells = graph.getSelectionCells();
-
                     var bounds = graph.getView().getBounds(cells);//返回边界
 
                     // Function that is executed when the image is dropped on
@@ -105,9 +102,7 @@
                     //    var dx = pt.x - bounds.x;
                     //    var dy = pt.y - bounds.y;
 
-
                     //    var clones = graph.importCells(cells, dx, dy); //导入cell 
-
                     //    graph.setSelectionCells(clones);
                     //}
 
@@ -115,14 +110,22 @@
                     //var img = toolbar.addMode(null, 'mxGraph/examples/editors/images/outline.gif', funct);
 
                     //Configures the given DOM element to act as a drag source for the specified graph.
-
                     //mxUtils.makeDraggable(img, graph, funct);
                     graph.removeCells();
                 }
             });
-            button.style.position = 'absolute';
-            button.style.left = '2px';
-            button.style.top = '2px';
+
+            //hock delete key 
+            var keyHandler = new mxKeyHandler(graph);
+            keyHandler.bindKey(46, function (evt) {
+                if (graph.isEnabled()) {
+                    graph.removeCells();
+                }
+            });
+
+            //button.style.position = 'absolute';
+            //button.style.left = '2px';
+            //button.style.top = '2px';
             document.body.appendChild(button);
 
             var btnXml = mxUtils.button('XML', function (evt) {
@@ -135,15 +138,83 @@
                 }
             });
 
-            btnXml.style.position = 'absolute';
-            btnXml.style.left = '55px';
-            btnXml.style.top = '2px';
+            //btnXml.style.position = 'absolute';
+            //btnXml.style.left = '55px';
+            //btnXml.style.top = '2px';
             document.body.appendChild(btnXml);
 
             //------------------以下是测试demo-------------------
             text1(graph, model);
             //canvasDraw(graph);
             guides(graph, container);
+
+            //-------------------按钮功能------------------------
+            var currentPermission = null;
+            var apply = function (permission) {
+                graph.clearSelection();
+                permission.apply(graph);
+                graph.setEnabled(true);
+                graph.setTooltips(true);
+
+                // Updates the icons on the shapes - rarely
+                // needed and very slow for large graphs
+                graph.refresh();
+                currentPermission = permission;
+            };
+
+            apply(new Permission());
+
+            var button = mxUtils.button('Allow All', function (evt) {
+                apply(new Permission());
+            });
+            document.body.appendChild(button);
+
+            var button = mxUtils.button('Connect Only', function (evt) {
+                apply(new Permission(false, true, false, false, true));
+            });
+            document.body.appendChild(button);
+
+            var button = mxUtils.button('Edges Only', function (evt) {
+                apply(new Permission(false, false, true, false, false));
+            });
+            document.body.appendChild(button);
+
+            var button = mxUtils.button('Vertices Only', function (evt) {
+                apply(new Permission(false, false, false, true, false));
+            });
+            document.body.appendChild(button);
+
+            var button = mxUtils.button('Select Only', function (evt) {
+                apply(new Permission(false, false, false, false, false));
+            });
+            document.body.appendChild(button);
+
+            var button = mxUtils.button('Locked', function (evt) {
+                apply(new Permission(true, false));
+            });
+            document.body.appendChild(button);
+
+            var button = mxUtils.button('Disabled', function (evt) {
+                graph.clearSelection();
+                graph.setEnabled(false);
+                graph.setTooltips(false);
+            });
+            document.body.appendChild(button);
+
+            //---------group---------------------------
+            //new mxRubberband(graph); 这句没起作用
+
+            var parent = graph.getDefaultParent();
+            // Adds cells to the model in a single step
+            graph.getModel().beginUpdate();
+            try {
+                var v1 = graph.insertVertex(parent, null, 'Hello,', 220, 20, 120, 60);
+                var v2 = graph.insertVertex(v1, null, 'World!', 90, 20, 60, 20);
+            }
+            finally {
+                // Updates the display
+                graph.getModel().endUpdate();
+            }
         }
 
         /*键盘移动*/
@@ -285,123 +356,6 @@
 
         }
 
-        function canvasDraw(graph) {
-
-            // Create grid dynamically (requires canvas)
-
-            try {
-                var canvas = document.createElement('canvas');
-                canvas.style.position = 'absolute';
-                canvas.style.top = '0px';
-                canvas.style.left = '0px';
-                canvas.style.zIndex = -1;
-                graph.container.appendChild(canvas);
-
-                var ctx = canvas.getContext('2d');
-
-                // Modify event filtering to accept canvas as container
-                mxGraphViewIsContainerEvent = mxGraphView.prototype.isContainerEvent;
-                mxGraphView.prototype.isContainerEvent = function (evt) {
-                    return mxGraphViewIsContainerEvent.apply(this, arguments) ||
-                        mxEvent.getSource(evt) == canvas;
-                };
-
-                var s = 0;
-                var gs = 0;
-                var tr = new mxPoint();
-                var w = 0;
-                var h = 0;
-
-                function repaintGrid() {
-                    if (ctx != null) {
-                        var bounds = graph.getGraphBounds();
-                        var width = Math.max(bounds.x + bounds.width, graph.container.clientWidth);
-                        var height = Math.max(bounds.y + bounds.height, graph.container.clientHeight);
-                        var sizeChanged = width != w || height != h;
-
-                        if (graph.view.scale != s || graph.view.translate.x != tr.x || graph.view.translate.y != tr.y ||
-                            gs != graph.gridSize || sizeChanged) {
-                            tr = graph.view.translate.clone();
-                            s = graph.view.scale;
-                            gs = graph.gridSize;
-                            w = width;
-                            h = height;
-
-                            // Clears the background if required
-                            if (!sizeChanged) {
-                                ctx.clearRect(0, 0, w, h);
-                            }
-                            else {
-                                canvas.setAttribute('width', w);
-                                canvas.setAttribute('height', h);
-                            }
-
-                            var tx = tr.x * s;
-                            var ty = tr.y * s;
-
-                            // Sets the distance of the grid lines in pixels
-                            var minStepping = graph.gridSize;
-                            var stepping = minStepping * s;
-
-                            if (stepping < minStepping) {
-                                var count = Math.round(Math.ceil(minStepping / stepping) / 2) * 2;
-                                stepping = count * stepping;
-                            }
-
-                            var xs = Math.floor((0 - tx) / stepping) * stepping + tx;
-                            var xe = Math.ceil(w / stepping) * stepping;
-                            var ys = Math.floor((0 - ty) / stepping) * stepping + ty;
-                            var ye = Math.ceil(h / stepping) * stepping;
-
-                            xe += Math.ceil(stepping);
-                            ye += Math.ceil(stepping);
-
-                            var ixs = Math.round(xs);
-                            var ixe = Math.round(xe);
-                            var iys = Math.round(ys);
-                            var iye = Math.round(ye);
-
-                            // Draws the actual grid
-                            ctx.strokeStyle = '#f6f6f6';
-                            ctx.beginPath();
-
-                            for (var x = xs; x <= xe; x += stepping) {
-                                x = Math.round((x - tx) / stepping) * stepping + tx;
-                                var ix = Math.round(x);
-
-                                ctx.moveTo(ix + 0.5, iys + 0.5);
-                                ctx.lineTo(ix + 0.5, iye + 0.5);
-                            }
-
-                            for (var y = ys; y <= ye; y += stepping) {
-                                y = Math.round((y - ty) / stepping) * stepping + ty;
-                                var iy = Math.round(y);
-
-                                ctx.moveTo(ixs + 0.5, iy + 0.5);
-                                ctx.lineTo(ixe + 0.5, iy + 0.5);
-                            }
-
-                            ctx.closePath();
-                            ctx.stroke();
-                        }
-                    }
-                };
-            }
-            catch (e) {
-                mxLog.show();
-                mxLog.debug('Using background image');
-
-                container.style.backgroundImage = 'url(\'mxGraph/examples/editors/images/grid.gif\')';
-            }
-
-            mxGraphViewValidateBackground = mxGraphView.prototype.validateBackground;
-            mxGraphView.prototype.validateBackground = function () {
-                mxGraphViewValidateBackground.apply(this, arguments);
-                repaintGrid();
-            };
-
-        }
-
         function addToolbarItem(graph, toolbar, prototype, image) {
             // Function that is executed when the image is dropped on
             // the graph. The cell argument points to the cell under
@@ -423,6 +377,18 @@
             mxUtils.makeDraggable(img, graph, funct);
         }
 
+        function Permission(locked, createEdges, editEdges, editVertices, cloneCells) {
+            this.locked = (locked != null) ? locked : false;
+            this.createEdges = (createEdges != null) ? createEdges : true;
+            this.editEdges = (editEdges != null) ? editEdges : true;;
+            this.editVertices = (editVertices != null) ? editVertices : true;;
+            this.cloneCells = (cloneCells != null) ? cloneCells : true;;
+        };
+
+        Permission.prototype.apply = function (graph) {
+            graph.setConnectable(this.createEdges);
+            graph.setCellsLocked(this.locked);
+        };
     </script>
 </head>
 
