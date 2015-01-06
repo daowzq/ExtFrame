@@ -7,6 +7,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="css/common.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            background-color: #4B9CD7;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">

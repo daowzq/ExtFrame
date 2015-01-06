@@ -34,8 +34,6 @@
                     borderTopWidth: '0px',
                     borderLeftColor: '#eed485'
                 },
-
-                margin: '0 80 0 0',
                 dockedItems: [
             {
                 xtype: 'toolbar',
@@ -144,7 +142,7 @@
 
             var grid = Ext.create('Ext.grid.Panel', {
                 region: "center",
-                margins: '10 80 20 0',
+                margins: '10 0 0 0',
                 //height: 500,
                 //title: '详细数据',
                 //selModel: Ext.create('Ext.selection.CheckboxModel', { mode: "SIMPLE" }),
