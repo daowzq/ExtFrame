@@ -230,6 +230,8 @@
     <Content Include="Global.asax" />
     <Content Include="GraphEditor.aspx" />
     <Content Include="GridDemo.aspx" />
+    <Content Include="js\numeric-1.2.6.js" />
+    <Content Include="js\numeric-1.2.6.min.js" />
     <Content Include="mxGraph.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\1.png" />
@@ -722,6 +724,7 @@
     <Content Include="ProductDemo.aspx" />
     <Content Include="TopPage.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WinTesst.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\BasePage.cs">
@@ -805,6 +808,13 @@
     </Compile>
     <Compile Include="TopPage.aspx.designer.cs">
       <DependentUpon>TopPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WinTesst.aspx.cs">
+      <DependentUpon>WinTesst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WinTesst.aspx.designer.cs">
+      <DependentUpon>WinTesst.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
