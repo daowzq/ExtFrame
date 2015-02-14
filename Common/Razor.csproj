@@ -71,7 +71,7 @@
     <Compile Include="DataHelper\Other.cs" />
     <Compile Include="DataHelper\SearchCriterion.cs" />
     <Compile Include="DataHelper\SearchHelper.cs" />
-    <Compile Include="DataTableToPdf.cs" />
+    <Compile Include="DataHelper\DataTableToPdf.cs" />
     <Compile Include="DynamicJson\Bson\BsonConvert.cs" />
     <Compile Include="DynamicJson\Bson\BsonDeserializer.cs" />
     <Compile Include="DynamicJson\Bson\BsonDocument.cs" />
@@ -149,7 +149,7 @@
     <Compile Include="Razor.cs" />
     <Compile Include="SecurityHelper.cs" />
     <Compile Include="Serializer.cs" />
-    <Compile Include="SQLDbHelper .cs" />
+    <Compile Include="DataHelper\SQLDbHelper .cs" />
     <Compile Include="StringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SysDiagnose.cs" />

@@ -1469,21 +1469,21 @@
     <Content Include="Js\numeric-1.2.6.min.js" />
     <Content Include="Testpage\mxGraph.aspx" />
     <Content Include="Home.aspx" />
-    <Content Include="images\1.png" />
-    <Content Include="images\2.png" />
-    <Content Include="images\3.png" />
-    <Content Include="images\block_login.png" />
-    <Content Include="images\button_login.png" />
-    <Content Include="images\close.png" />
-    <Content Include="images\home_poster.png" />
-    <Content Include="images\icons.gif" />
-    <Content Include="images\icons.png" />
-    <Content Include="images\ico_total.gif" />
-    <Content Include="images\ico_total.png" />
-    <Content Include="images\login_bg.jpg" />
-    <Content Include="images\logo.gif" />
-    <Content Include="images\logo.png" />
-    <Content Include="images\per.png" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\block_login.png" />
+    <Content Include="Images\button_login.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\home_poster.png" />
+    <Content Include="Images\icons.gif" />
+    <Content Include="Images\icons.png" />
+    <Content Include="Images\ico_total.gif" />
+    <Content Include="Images\ico_total.png" />
+    <Content Include="Images\login_bg.jpg" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\per.png" />
     <Content Include="Js\body_width_height.js" />
     <Content Include="Js\jquery-1.7.2.min.js" />
     <Content Include="LeftPage.aspx" />
@@ -1965,8 +1965,6 @@
     <Compile Include="Common\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Common\ComandInfo.cs" />
-    <Compile Include="Common\DataHelper.cs" />
     <Compile Include="Common\GridJsonStruct.cs" />
     <Compile Include="Common\GridPagingStruct.cs" />
     <Compile Include="Common\PageStateContainer.cs" />
@@ -2139,9 +2137,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Razor.csproj">
+      <Project>{e2d4cdfb-2816-44cb-a69b-5b2074cc17e4}</Project>
+      <Name>Razor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataModel\DataModel.csproj">
       <Project>{c1f4578d-d3e5-41da-b8ac-72021b313e45}</Project>
       <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
+      <Name>DBUtility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

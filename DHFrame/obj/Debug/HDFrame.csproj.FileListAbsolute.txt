@@ -54,3 +54,9 @@ D:\ProjectDoem\ExtFrame\DHFrame\bin\Transformer.NET.xml
 D:\ProjectDoem\ExtFrame\DHFrame\obj\Debug\HDFrame.csprojResolveAssemblyReference.cache
 D:\ProjectDoem\ExtFrame\DHFrame\obj\Debug\HDFrame.dll
 D:\ProjectDoem\ExtFrame\DHFrame\obj\Debug\HDFrame.pdb
+D:\ProjectDoem\ExtFrame\DHFrame\bin\flexB2C.DBUtility.dll
+D:\ProjectDoem\ExtFrame\DHFrame\bin\Razor.dll
+D:\ProjectDoem\ExtFrame\DHFrame\bin\itextsharp.dll
+D:\ProjectDoem\ExtFrame\DHFrame\bin\MySql.Data.dll
+D:\ProjectDoem\ExtFrame\DHFrame\bin\Razor.pdb
+D:\ProjectDoem\ExtFrame\DHFrame\bin\flexB2C.DBUtility.pdb

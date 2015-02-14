@@ -37,7 +37,7 @@ namespace HDFrame
                                             (jObj["Email"] + "").Replace("\"", ""),
                                              (jObj["Postion"] + "").Replace("\"", ""));
 
-                DBHelper.DbHelperSQL.ExecuteSql(sql);
+                Razor.Data.DataHelper.ExecSql(sql);
                 Response.Write("1");
                 Response.End();
             }
@@ -83,8 +83,8 @@ namespace HDFrame
                 }
             }
             sql = sql + " order by CreateTime desc";
-            DataSet ds = DBHelper.DbHelperSQL.Query(sql);
-            DataTable dt = ds.Tables[0];
+
+            DataTable dt = Razor.Data.DataHelper.QueryDataTable(sql);
             DataTable newDt = GetPagedTable(dt, GridPagingStruct.Page, GridPagingStruct.PageSize);
             GridJsonStruct gjs = new GridJsonStruct(newDt, dt.Rows.Count);
 

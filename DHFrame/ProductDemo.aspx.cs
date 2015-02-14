@@ -36,8 +36,7 @@ namespace HDFrame
                                            (jObj["Job"] + "").Replace("\"", ""),
                                             (jObj["Email"] + "").Replace("\"", ""),
                                              (jObj["Postion"] + "").Replace("\"", ""));
-
-                DBHelper.DbHelperSQL.ExecuteSql(sql);
+                Razor.Data.DataHelper.ExecSql(sql);
                 Response.Write("1");
                 Response.End();
             }

@@ -15,3 +15,12 @@ D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.Core.dll
 D:\Frame\MyFrame\Razor\Common\bin\Debug\NHibernate.Search.dll
 D:\Frame\MyFrame\Razor\Common\bin\Debug\PostSharp.dll
 D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Razor.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Razor.pdb
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\itextsharp.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Castle.Components.Validator.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Castle.Core.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\NHibernate.Search.dll
+D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
+D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.dll
+D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.pdb

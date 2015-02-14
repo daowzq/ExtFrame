@@ -9,3 +9,8 @@ D:\Frame\MyFrame\Razor\DBUtility\bin\Debug\flexB2C.DBUtility.pdb
 D:\Frame\MyFrame\Razor\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
 D:\Frame\MyFrame\Razor\DBUtility\obj\Debug\flexB2C.DBUtility.dll
 D:\Frame\MyFrame\Razor\DBUtility\obj\Debug\flexB2C.DBUtility.pdb
+D:\ProjectDoem\ExtFrame\DBUtility\bin\Debug\flexB2C.DBUtility.dll
+D:\ProjectDoem\ExtFrame\DBUtility\bin\Debug\flexB2C.DBUtility.pdb
+D:\ProjectDoem\ExtFrame\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\ProjectDoem\ExtFrame\DBUtility\obj\Debug\flexB2C.DBUtility.dll
+D:\ProjectDoem\ExtFrame\DBUtility\obj\Debug\flexB2C.DBUtility.pdb
