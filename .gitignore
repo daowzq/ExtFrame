@@ -1,3 +1,6 @@
 /DHFrame/bin
 Ext.Net.dll
 /DataModel/obj
+/DHFrame/*.config
+/DHFrame/Web.Debug.config
+/DHFrame/Web.Release.config
