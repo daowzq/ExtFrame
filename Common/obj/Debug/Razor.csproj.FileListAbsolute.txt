@@ -1,0 +1,17 @@
+D:\Frame\Razor\Common\bin\Debug\Razor.dll
+D:\Frame\Razor\Common\bin\Debug\Razor.pdb
+D:\Frame\Razor\Common\obj\Debug\Razor.dll
+D:\Frame\Razor\Common\obj\Debug\Razor.pdb
+D:\Frame\Razor\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Razor.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Razor.pdb
+D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.dll
+D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.pdb
+D:\Frame\MyFrame\Razor\Common\bin\Debug\itextsharp.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.ActiveRecord.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\NHibernate.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.Components.Validator.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.Core.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\NHibernate.Search.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\PostSharp.dll
+D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache

@@ -107,7 +107,7 @@
                     region: 'center',
                     plain: true,
                     xtype: 'tabpanel',
-                    activeTab: 2,
+                    activeTab: 1,
                     minTabWidth: 100,
                     items: [
                         {
