@@ -4,3 +4,4 @@ Ext.Net.dll
 /DHFrame/*.config
 /DHFrame/Web.Debug.config
 /DHFrame/Web.Release.config
+/DHFrame/obj
