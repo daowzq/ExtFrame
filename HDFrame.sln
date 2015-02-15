@@ -9,9 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razor", "Common\Razor.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicJson", "DynamicJson\DynamicJson.csproj", "{9F68A91C-E200-4998-A601-10D9FFFE94DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUtility.csproj", "{0988C62E-247F-471F-A183-DB509C7A3839}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionitem", "solutionitem", "{608FDDB9-7879-415D-BCFD-14F84CD5A294}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionitem", "solutionitem", "{D8A96AA2-12C0-4BA5-9D47-8A7D6DE5719A}"
+	ProjectSection(SolutionItems) = preProject
+		deploy.txt = deploy.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +36,6 @@ Global
 		{9F68A91C-E200-4998-A601-10D9FFFE94DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F68A91C-E200-4998-A601-10D9FFFE94DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F68A91C-E200-4998-A601-10D9FFFE94DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0988C62E-247F-471F-A183-DB509C7A3839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0988C62E-247F-471F-A183-DB509C7A3839}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0988C62E-247F-471F-A183-DB509C7A3839}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0988C62E-247F-471F-A183-DB509C7A3839}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
