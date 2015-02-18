@@ -61,10 +61,6 @@ namespace HDFrame
                 var jarr = (JArray)JsonConvert.DeserializeObject(GridPagingStruct.search);
                 dynamic jsonObj = DynamicJson.DynamicJsonConvert.Parse(GridPagingStruct.search);
 
-                //string Name = (jarr[0]["Name"] + "").Replace("\"\"", "");
-                //string Age = (jarr[1]["Age"] + "").Replace("\"\"", "");
-                //string Email = (jarr[2]["Email"] + "").Replace("\"\"", "");
-
                 string Name = jsonObj[0].Name;
                 string Age = jsonObj[1].Age;
                 string Email = jsonObj[2].Email;

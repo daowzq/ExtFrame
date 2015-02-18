@@ -1,0 +1,9 @@
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.exe
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.pdb
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.frmGenerator.resources
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.Properties.Resources.resources
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.exe
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.pdb
+D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.exe.config

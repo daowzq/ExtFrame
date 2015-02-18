@@ -119,7 +119,7 @@
                              title: '采购管理单',
                              id: 'tab1',
                              closable: true,
-                             html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../GridDemo.aspx" name="frameContent" frameborder="0"></iframe>'
+                             html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../testpage/GridDemo.aspx" name="frameContent" frameborder="0"></iframe>'
                          },
                            {
                                title: '商品信息',

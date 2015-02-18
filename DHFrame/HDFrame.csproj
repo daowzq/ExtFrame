@@ -1956,9 +1956,9 @@
     <Content Include="Js\mxGraph\src\images\window.gif" />
     <Content Include="Js\mxGraph\src\js\mxClient.js" />
     <Content Include="ProductDemo.aspx" />
+    <Content Include="Testpage\test.aspx" />
     <Content Include="TopPage.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Testpage\WinTesst.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\BasePage.cs">
@@ -2027,19 +2027,19 @@
       <DependentUpon>ProductDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testpage\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testpage\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TopPage.aspx.cs">
       <DependentUpon>TopPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TopPage.aspx.designer.cs">
       <DependentUpon>TopPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Testpage\WinTesst.aspx.cs">
-      <DependentUpon>WinTesst.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Testpage\WinTesst.aspx.designer.cs">
-      <DependentUpon>WinTesst.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
