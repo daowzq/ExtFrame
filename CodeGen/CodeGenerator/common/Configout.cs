@@ -54,5 +54,12 @@ namespace CodeGenerator.Common
                 return ConfigurationManager.AppSettings["NameSpace"];
             }
         }
+        public static string ConnectString
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["ConnectionString"];
+            }
+        }
     }
 }

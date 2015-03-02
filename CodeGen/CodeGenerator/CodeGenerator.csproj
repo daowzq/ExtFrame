@@ -52,10 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\CodeGenFactory.cs" />
     <Compile Include="common\Configout.cs" />
-    <Compile Include="common\Bbinfo.cs" />
-    <Compile Include="common\GenerateCode.cs" />
+    <Compile Include="common\DBFieldInfo.cs" />
+    <Compile Include="common\DBForeignKeyInfo.cs" />
+    <Compile Include="common\DBInfo.cs" />
+    <Compile Include="common\DBRelatedTableInfo.cs" />
+    <Compile Include="common\DBTableInfo.cs" />
     <Compile Include="common\IDbInfo.cs" />
+    <Compile Include="common\ModelGenerator.cs" />
     <Compile Include="common\MSSQLDbInfo.cs" />
     <Compile Include="dbhelper\CommandInfo.cs" />
     <Compile Include="dbhelper\DbHelperMySQL.cs" />

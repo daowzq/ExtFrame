@@ -5,3 +5,5 @@ Ext.Net.dll
 /DHFrame/Web.Debug.config
 /DHFrame/Web.Release.config
 /DHFrame/obj
+/CodeGen/CodeGenerator/Form1.cs
+Generated

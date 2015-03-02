@@ -7,3 +7,12 @@ D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\C
 D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.exe
 D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.pdb
 D:\Documents\Visual Studio 2008\Projects\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.exe.config
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\bin\Debug\CodeGenerator.exe.config
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\obj\Debug\CodeGenerator.exe
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\obj\Debug\CodeGenerator.pdb
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\bin\Debug\CodeGenerator.exe
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\bin\Debug\CodeGenerator.pdb
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\obj\Debug\CodeGenerator.frmGenerator.resources
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\obj\Debug\CodeGenerator.Properties.Resources.resources
+D:\ProjectDoem\ExtFrame\CodeGen\CodeGenerator\obj\Debug\CodeGenerator.csproj.GenerateResource.Cache
