@@ -7,3 +7,5 @@ Ext.Net.dll
 /DHFrame/obj
 /CodeGen/CodeGenerator/Form1.cs
 Generated
+/Common/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/DynamicJson/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
