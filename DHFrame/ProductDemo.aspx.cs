@@ -59,7 +59,7 @@ namespace HDFrame
             if (!string.IsNullOrEmpty(GridPagingStruct.search))
             {
                 var jarr = (JArray)JsonConvert.DeserializeObject(GridPagingStruct.search);
-                dynamic jsonObj = DynamicJson.DynamicJsonConvert.Parse(GridPagingStruct.search);
+                dynamic jsonObj = Razor.DynamicJson.DynamicJsonConvert.Parse(GridPagingStruct.search);
 
                 string Name = jsonObj[0].Name;
                 string Age = jsonObj[1].Age;
@@ -82,7 +82,7 @@ namespace HDFrame
             var list = DataPaging.FindAll<Employee>(GridPagingStruct.Page, GridPagingStruct.PageSize,
                                                    new Order[] { new Order("CreateTime", false) }, exps.ToArray());
             GridJsonStruct gjs = new GridJsonStruct(list, DataPaging.GetCount<Employee>());
-            return DynamicJson.DynamicJsonConvert.SerializeObject(gjs);
+            return Razor.DynamicJson.DynamicJsonConvert.SerializeObject(gjs);
         }
 
 

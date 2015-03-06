@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Xml.Linq;
 
-namespace DynamicJson
+namespace Razor.DynamicJson
 {
     /// <summary>
     /// Dynamic JSON

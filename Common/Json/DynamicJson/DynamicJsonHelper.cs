@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Xml.Linq;
 
-namespace DynamicJson
+namespace Razor.DynamicJson
 {
   internal static class DynamicJsonHelper
   {

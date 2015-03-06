@@ -74,7 +74,7 @@ namespace HDFrame.Common
         /// </summary>
         private string packPageState()
         {
-            return DynamicJson.DynamicJsonConvert.SerializeObject(this.pageState);
+            return Razor.DynamicJson.DynamicJsonConvert.SerializeObject(this.pageState);
         }
 
         //去缓存

@@ -59,7 +59,7 @@ namespace HDFrame
             if (!string.IsNullOrEmpty(GridPagingStruct.search))
             {
                 var jarr = (JArray)JsonConvert.DeserializeObject(GridPagingStruct.search);
-                dynamic jsonObj = DynamicJson.DynamicJsonConvert.Parse(GridPagingStruct.search);
+                dynamic jsonObj = Razor.DynamicJson.DynamicJsonConvert.Parse(GridPagingStruct.search);
 
                 string Name = jsonObj[0].Name;
                 string Age = jsonObj[1].Age;

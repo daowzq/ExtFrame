@@ -54,9 +54,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DynamicJson">
-      <HintPath>..\library\DynamicJson.dll</HintPath>
-    </Reference>
     <Reference Include="Ext.Net">
       <HintPath>..\library\Ext.Net.dll</HintPath>
     </Reference>

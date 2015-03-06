@@ -3,7 +3,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace DynamicJson
+namespace Razor.DynamicJson
 {
   /// <summary>
   /// DynamicJson转换器
