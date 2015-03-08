@@ -107,7 +107,7 @@
                     region: 'center',
                     plain: true,
                     xtype: 'tabpanel',
-                    activeTab: 1,
+                    activeTab: 3,
                     minTabWidth: 100,
                     items: [
                         {
@@ -126,6 +126,12 @@
                                id: 'tb12',
                                closable: true,
                                html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../ProductDemo.aspx" name="frameContent" frameborder="0"></iframe>'
+                           },
+                           {
+                               title: '测试页面',
+                               id: 'tb13',
+                               closable: true,
+                               html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="../testpage/test.aspx" name="frameContent" frameborder="0"></iframe>'
                            }
                     ]
 

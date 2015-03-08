@@ -20,10 +20,16 @@ D:\ProjectDoem\ExtFrame\Common\bin\Debug\Razor.pdb
 D:\ProjectDoem\ExtFrame\Common\bin\Debug\itextsharp.dll
 D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.dll
 D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.pdb
-D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
 D:\Frame\ExtFrame\Common\bin\Debug\Razor.dll
 D:\Frame\ExtFrame\Common\bin\Debug\Razor.pdb
 D:\Frame\ExtFrame\Common\bin\Debug\itextsharp.dll
 D:\Frame\ExtFrame\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
 D:\Frame\ExtFrame\Common\obj\Debug\Razor.dll
 D:\Frame\ExtFrame\Common\obj\Debug\Razor.pdb
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Bson.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Driver.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Bson.pdb
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Bson.xml
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Driver.pdb
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Driver.xml
+D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
