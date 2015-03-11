@@ -10,7 +10,8 @@ namespace Razor.Mongo
     {
 
         //创建数据库链接
-        private static MongoServer Servier = new MongoClient(Connnection.ServerAddress).GetServer();
+        private static MongoServer Servier = new MongoClient(Connnection.ServerAddress).GetServer();//报错 还需要调试
+        // private static MongoServer Servier = MongoDB.Driver.MongoServer.Create(Connnection.ServerAddress);
         private MongoDatabase MonDB = Servier.GetDatabase(Connnection.DbName);
 
         public MongoBaseAction(string DbName)

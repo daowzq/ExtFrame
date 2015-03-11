@@ -13,14 +13,29 @@ namespace HDFrame.Testpage
         {
             if (!X.IsAjaxRequest)
             {
-                MongoDbT();
+                
             }
         }
-
+        /// <summary>
+        /// MongoDb 测试
+        /// </summary>
         protected void MongoDbT()
         {
             string Config = Razor.Mongo.Connnection.ServerAddress;
-            X.Msg.Alert("Tip", Config).Show();
+            string DBName = Razor.Mongo.Connnection.DbName;
+
+
+            Razor.Mongo.MongoBaseAction BA = new Razor.Mongo.MongoBaseAction(DBName);
+            Stuend st = new Stuend();
+            st.Name = "张三";
+            st.Age = 18;
+            BA.Insert<Stuend>(typeof(Stuend).Name, st);
+            X.Msg.Alert("Tip", "插入成功").Show();
+        }
+        class Stuend
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
         }
     }
 }

@@ -8,13 +8,30 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            function Person() {
+            }
+            Person.prototype.name = "Nicholas";
+            Person.prototype.age = 29;
+            Person.prototype.job = "Software Engineer";
+            Person.prototype.sayName = function () {
+                alert(this.name);
+            };
+            var person1 = new Person();
+            var person2 = new Person();
+            person1.sayName();
+        })
+       
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
         <ext:ResourceManager runat="server"></ext:ResourceManager>
         <ext:Panel runat="server"
-             Title="Title"
-             Width="300px" 
+            Title="Title"
+            Width="300px"
             Height="400px">
             <Content>
                 <div>hello world!</div>
