@@ -11,19 +11,27 @@
 
     <script type="text/javascript">
         Ext.onReady(function () {
-            function Person() {
+            function Person(name, job) {
+                //this.name = name;
+                //this.job = job;
             }
+            function replaceObj(name, job) {
+                this.name = name;
+                this.job = job;
+            }
+
             Person.prototype.name = "Nicholas";
             Person.prototype.age = 29;
             Person.prototype.job = "Software Engineer";
             Person.prototype.sayName = function () {
                 alert(this.name);
             };
-            var person1 = new Person();
-            var person2 = new Person();
+            var person1 = new Person("屌丝", "程序员");
+            //var person2 = new Person();
             person1.sayName();
+
         })
-       
+
     </script>
 </head>
 <body>

@@ -24,7 +24,6 @@ namespace HDFrame.Testpage
             string Config = Razor.Mongo.Connnection.ServerAddress;
             string DBName = Razor.Mongo.Connnection.DbName;
 
-
             Razor.Mongo.MongoBaseAction BA = new Razor.Mongo.MongoBaseAction(DBName);
             Stuend st = new Stuend();
             st.Name = "张三";
