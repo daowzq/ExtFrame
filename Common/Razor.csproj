@@ -154,7 +154,7 @@
     <None Include="OpenSmtp\makefile" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="log\" />
+    <Folder Include="Log\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
