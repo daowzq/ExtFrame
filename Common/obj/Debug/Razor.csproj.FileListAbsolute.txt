@@ -33,3 +33,9 @@ D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Bson.xml
 D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Driver.pdb
 D:\ProjectDoem\ExtFrame\Common\bin\Debug\MongoDB.Driver.xml
 D:\ProjectDoem\ExtFrame\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
+D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Bson.dll
+D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Driver.dll
+D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Bson.pdb
+D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Bson.xml
+D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Driver.pdb
+D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Driver.xml

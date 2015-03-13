@@ -28,8 +28,6 @@
             };
             var person1 = new Person("屌丝", "程序员");
             //var person2 = new Person();
-            person1.sayName();
-
         })
 
     </script>

@@ -17,15 +17,6 @@
             background-color: rgb(231,234,236);
         }
 
-        .navigotar {
-            position: fixed;
-            z-index: 999;
-        }
-
-        #westDiv {
-            position: relative;
-        }
-
         .bottomCls {
             background-color: #4B9CD7 !important;
         }
@@ -55,6 +46,7 @@
             });
 
             var tree = Ext.create('Ext.tree.Panel', {
+                title: "系统权限",
                 store: store,
                 border: false,
                 rootVisible: false
@@ -95,15 +87,22 @@
                 }, {
                     id: 'westDiv',
                     region: 'west',
-                    layout: 'fit',
+                    layout: {
+                        // layout-specific configs go here
+                        type: 'accordion',
+                        animate: true
+                    },
                     margin: '10 0 0 0',
                     collapsible: true,
                     title: '功能列表',
                     width: 180,
-                    items: [tree]
+                    items: [tree, {
+                        title: 'Panel 2',
+                        html: 'Panel content!'
+                    }]
                 }, {
                     id: 'tabpanel',
-                    margin: '10 50 15 10',
+                    margin: '10 15 15 10',
                     region: 'center',
                     plain: true,
                     xtype: 'tabpanel',
