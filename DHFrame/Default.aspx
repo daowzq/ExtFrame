@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <style type="text/css">
         .view-cls {
-            background-color: rgb(231,234,236);
+            background-color: #e7eaec;
         }
 
         .bottomCls {
