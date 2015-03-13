@@ -6,11 +6,9 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Default</title>
-
     <link href="ExtJs/resources/css/ext-all-neptune.css" rel="stylesheet" />
     <script type="text/javascript" src="ExtJs/ext-all-debug.js"></script>
     <script src="ExtJs/ext-theme-neptune.js" type="text/javascript"></script>
-
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <style type="text/css">
         .view-cls {
@@ -36,11 +34,14 @@
                     children: [
                         { text: "首页", id: 'tb0', leaf: true },
                         {
-                            text: "系统权限", expanded: true, children: [
-                               { text: "组织机构", leaf: true }, { text: "用户角色", leaf: true }
+                            text: "系统权限",
+                            id: 'tb1',
+                            expanded: true,
+                            children: [
+                               { id: 'tb1_1', text: "组织机构", leaf: true }, { id: 'tb1_2', text: "用户角色", leaf: true }
                             ]
                         },
-                        { text: "个人配置", leaf: true }
+                        { id: 'tb2', text: "个人配置", leaf: true }
                     ]
                 }
             });
@@ -57,21 +58,19 @@
                 var nodeid = rcd.get('id');
                 //var dirtype = rcd.raw.dirtype; //自定义数据
 
+                var tabItem = Ext.getCmp(nodeid);
                 var tabCmp = Ext.ComponentQuery.query('tabpanel')[0];
-                var childItem = tabCmp.items;
-                //去除重复
-                for (var i = 0; i < childItem.length; i++) {
-                    if (childItem.items[0].id == nodeid) {
-                        return;
-                    }
+                if (tabItem == null) {
+                    //添加tab
+                    tabCmp.add({
+                        id: nodeid,
+                        title: nodeName,
+                        closable: true
+                    });
+                } else {
+                    //重复点击
+                    tabCmp.setActiveTab(tabItem)
                 }
-                //添加tab
-                tabCmp.add({
-                    id: nodeid,
-                    title: nodeName,
-                    closable: true
-                });
-
             });
 
             //-------布局-------------------------
