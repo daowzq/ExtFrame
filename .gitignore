@@ -12,3 +12,5 @@ Generated
 /HDFrame.v11.suo
 /Common/bin
 /DataModel/bin
+/CodeGen/CodeGenerator/bin/Debug/CodeGenerator.exe.config
+*.config
