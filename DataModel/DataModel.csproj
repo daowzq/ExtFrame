@@ -72,8 +72,8 @@
   <ItemGroup>
     <Compile Include="DataPaging.cs" />
     <Compile Include="Generate\Employee.cs" />
-    <Compile Include="Generate\System\SysModule.cs" />
-    <Compile Include="Generate\System\SysModule.g.cs" />
+    <Compile Include="System\SysModule.cs" />
+    <Compile Include="System\SysModule.g.cs" />
     <Compile Include="IDGenerator.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

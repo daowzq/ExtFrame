@@ -14,3 +14,4 @@ Generated
 /DataModel/bin
 /CodeGen/CodeGenerator/bin/Debug/CodeGenerator.exe.config
 *.config
+/CodeGen/CodeGenerator/bin/Debug/CodeGenerator.vshost.exe.config
