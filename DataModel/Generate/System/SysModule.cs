@@ -8,10 +8,8 @@ using System.Runtime.Serialization;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Transform;
-using Newtonsoft.Json;
 using Castle.ActiveRecord;
 using Castle.ActiveRecord.Queries;
-using Aim.Data;
 	
 namespace DataModel.Model
 {
@@ -21,16 +19,7 @@ namespace DataModel.Model
     [Serializable]
 	public partial class SysModule
     {
-        #region 成员变量
-
-        #endregion
-
-        #region 成员属性
-        
-        #endregion
-
-        #region 公共方法
-
+        #region 成员方法
         /// <summary>
         /// 验证操作
         /// </summary>

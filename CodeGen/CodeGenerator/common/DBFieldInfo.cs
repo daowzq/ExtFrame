@@ -419,7 +419,7 @@ namespace CodeGenerator.Common
             string result;
             if (this.IsPrimaryKey())
             {
-                result = "[PrimaryKey(\"" + this.Column_Name + "\", Generator = PrimaryKeyType.Custom, CustomGenerator = typeof(AimIdentifierGenerator), Access = PropertyAccess.NosetterLowercaseUnderscore)]";
+                result = "[PrimaryKey(\"" + this.Column_Name + "\", Generator = PrimaryKeyType.Custom, CustomGenerator = typeof(IDGenerator), Access = PropertyAccess.NosetterLowercaseUnderscore)]";
             }
             else
             {

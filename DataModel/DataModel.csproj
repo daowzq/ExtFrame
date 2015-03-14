@@ -75,7 +75,14 @@
     <Compile Include="Generate\System\SysModule.cs" />
     <Compile Include="Generate\System\SysModule.g.cs" />
     <Compile Include="IDGenerator.cs" />
+    <Compile Include="ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Razor.csproj">
+      <Project>{e2d4cdfb-2816-44cb-a69b-5b2074cc17e4}</Project>
+      <Name>Razor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

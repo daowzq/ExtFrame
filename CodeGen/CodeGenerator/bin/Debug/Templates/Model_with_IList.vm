@@ -3,21 +3,20 @@
 ## Castle ActiveRecord entity class
 ##
 // Business class ${table.GetClassName()} generated from ${table}
-// Creator: Ray
+// Creator: WGM
 // Created Date: [$date]
 
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Newtonsoft.Json;
 using Castle.ActiveRecord;
-using Aim.Data;
+using Razor.Data;
 	
 namespace ${namespace}.Model
 {
 	[ActiveRecord("$table")]
-	public $Partial class ${table.GetClassName()} : ExamModelBase<${table.GetClassName()}>
+	public $Partial class ${table.GetClassName()} : ModelBase<${table.GetClassName()}>
 	{
 ## property names (to avoid mis-spelling in an NHibernate Criteria)
 		#region Property_Names

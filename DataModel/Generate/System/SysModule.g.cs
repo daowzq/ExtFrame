@@ -1,19 +1,18 @@
 ﻿// Business class SysModule generated from SysModule
-// Creator: Ray
+// Creator: WGM
 // Created Date: [2015-03-14]
 
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Newtonsoft.Json;
 using Castle.ActiveRecord;
-using Aim.Data;
+using Razor.Data;
 	
 namespace DataModel.Model
 {
 	[ActiveRecord("SysModule")]
-	public partial class SysModule : ExamModelBase<SysModule>
+	public partial class SysModule : ModelBase<SysModule>
 	{
 		#region Property_Names
 
