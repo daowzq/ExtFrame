@@ -13,7 +13,7 @@ using System.ComponentModel;
 using Castle.ActiveRecord;
 using Razor.Data;
 	
-namespace ${namespace}.Model
+namespace ${namespace}
 {
 	[ActiveRecord("$table")]
 	public $Partial class ${table.GetClassName()} : ModelBase<${table.GetClassName()}>

@@ -29,7 +29,7 @@
         <ext:ResourceManager runat="server"></ext:ResourceManager>
         <ext:Viewport runat="server">
             <Items>
-                <ext:Panel runat="server" Region="North" Heigh="100px">
+                <ext:Panel runat="server" Region="North" Heigh="90px">
                     <Items>
                         <ext:Toolbar runat="server">
                             <Items>
@@ -41,7 +41,7 @@
                     </Items>
                 </ext:Panel>
                 <%-- treePanel --%>
-                <ext:TreePanel ID="TreePanel1"
+                <ext:TreePanel ID="SysModuleTree"
                     Region="Center"
                     runat="server"
                     UseArrows="true"
@@ -68,7 +68,7 @@
                                 </ext:Model>
                             </Model>
                             <Proxy>
-                                <ext:AjaxProxy Url="">
+                                <ext:AjaxProxy Url="?action=reader">
                                     <Reader>
                                         <ext:JsonReader />
                                     </Reader>
@@ -84,24 +84,11 @@
                                 Text="应用/模块"
                                 Width="240"
                                 Sortable="true"
-                                DataIndex="task" />
-                            <ext:TemplateColumn ID="TemplateColumn1"
-                                runat="server"
-                                Text="编号"
+                                DataIndex="Name" />
+                            <ext:Column runat="server" Text="编号"
                                 Width="120"
-                                Locked="true"
-                                Sortable="true"
-                                DataIndex="duration"
-                                Align="Center">
-                                <Template ID="Template1" runat="server">
-                                    <Html>
-                                {duration:this.formatHours}
-                            </Html>
-                                    <Functions>
-                                        <ext:JFunction Name="formatHours" Fn="formatHours" />
-                                    </Functions>
-                                </Template>
-                            </ext:TemplateColumn>
+                                DataIndex="Code">
+                            </ext:Column>
                             <ext:Column ID="Column1"
                                 runat="server"
                                 Text="类型"

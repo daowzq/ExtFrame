@@ -31,13 +31,13 @@ namespace HDFrame.SysModule {
         protected global::Ext.Net.Button Button1;
         
         /// <summary>
-        /// TreePanel1 控件。
+        /// SysModuleTree 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::Ext.Net.TreePanel TreePanel1;
+        protected global::Ext.Net.TreePanel SysModuleTree;
         
         /// <summary>
         /// TreeStore1 控件。
@@ -65,15 +65,6 @@ namespace HDFrame.SysModule {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::Ext.Net.TreeColumn TreeColumn1;
-        
-        /// <summary>
-        /// TemplateColumn1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::Ext.Net.TemplateColumn TemplateColumn1;
         
         /// <summary>
         /// Column1 控件。

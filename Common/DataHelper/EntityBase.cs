@@ -170,6 +170,11 @@ namespace Razor.Data
             return default(T);
         }
 
+        public static T[] FindAll()
+        {
+            return (T[])(ActiveRecordBase.FindAll(typeof(T)));
+        }
+
         public static T[] FindAll(SearchCriterion criterion)
         {
             return EntityBase<T>.FindAllByCriterion(criterion as HqlSearchCriterion, new ICriterion[0]);

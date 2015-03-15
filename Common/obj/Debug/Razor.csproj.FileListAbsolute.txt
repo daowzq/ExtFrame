@@ -39,3 +39,17 @@ D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Bson.pdb
 D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Bson.xml
 D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Driver.pdb
 D:\Frame\ExtFrame\Common\bin\Debug\MongoDB.Driver.xml
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Castle.ActiveRecord.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\NHibernate.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\PostSharp.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\NHibernate.ByteCode.Castle.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Castle.Components.Validator.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Castle.Core.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Iesi.Collections.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\NHibernate.Search.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Lucene.Net.dll
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\NHibernate.xml
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\NHibernate.ByteCode.Castle.xml
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Castle.Components.Validator.xml
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Castle.Core.xml
+D:\ProjectDoem\ExtFrame\Common\bin\Debug\Iesi.Collections.xml

@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.ActiveRecord">
-      <HintPath>..\library\Castle.ActiveRecord.dll</HintPath>
+      <HintPath>..\library\castleActive_Dbg3.5\Castle.ActiveRecord.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\library\itextsharp.dll</HintPath>
@@ -49,7 +49,7 @@
       <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
-      <HintPath>..\library\NHibernate.dll</HintPath>
+      <HintPath>..\library\castleActive_Dbg3.5\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="PostSharp">
       <HintPath>..\library\PostSharp.dll</HintPath>

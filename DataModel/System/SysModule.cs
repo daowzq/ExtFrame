@@ -10,14 +10,14 @@ using NHibernate.Criterion;
 using NHibernate.Transform;
 using Castle.ActiveRecord;
 using Castle.ActiveRecord.Queries;
-	
-namespace DataModel.Model
+
+namespace DataModel
 {
     /// <summary>
     /// 自定义实体类
     /// </summary>
     [Serializable]
-	public partial class SysModule
+    public partial class SysModule
     {
         #region 成员方法
         /// <summary>
@@ -67,7 +67,7 @@ namespace DataModel.Model
         public void DoUpdate()
         {
             this.DoValidate();
-                        
+
             this.LastModifiedDate = DateTime.Now;
 
             this.UpdateAndFlush();
@@ -82,22 +82,22 @@ namespace DataModel.Model
         }
 
         #endregion
-        
+
         #region 静态成员
-        
+
         /// <summary>
         /// 批量删除操作
         /// </summary>
         public static void DoBatchDelete(params object[] args)
         {
-			SysModule[] tents = SysModule.FindAll(Expression.In("ID", args));
+            SysModule[] tents = SysModule.FindAll(Expression.In("ID", args));
 
-			foreach (SysModule tent in tents)
-			{
-				tent.DoDelete();
-			}
+            foreach (SysModule tent in tents)
+            {
+                tent.DoDelete();
+            }
         }
-        
+
         #endregion
 
     } // SysModule
