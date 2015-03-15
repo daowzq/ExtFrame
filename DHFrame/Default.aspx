@@ -73,22 +73,13 @@
                 root: {
                     expanded: true,
                     children: [
-                        { text: "首页", id: 'tb0', leaf: true },
-                        {
-                            text: "系统权限",
-                            id: 'tb1',
-                            expanded: true,
-                            children: [
-                               { id: 'tb1_1', text: "组织机构", leaf: true }, { id: 'tb1_2', text: "用户角色", leaf: true }
-                            ]
-                        },
-                        { id: 'tb2', text: "个人配置", leaf: true }
+                        { text: "系统模块", id: 'tb0_model', leaf: true, url: "sysmodule/sysmodule.aspx" }
                     ]
                 }
             });
 
             var tree = Ext.create('Ext.tree.Panel', {
-                title: "系统权限",
+                title: "系统设置",
                 store: store,
                 border: false,
                 rootVisible: false
@@ -97,7 +88,8 @@
             tree.on("itemclick", function (view, rcd, item, idx, event, eOpts) {
                 var nodeName = rcd.get('text'); //节点名称
                 var nodeid = rcd.get('id');
-                //var dirtype = rcd.raw.dirtype; //自定义数据
+
+                var url = rcd.raw.url;          //自定义数据
                 var tabItem = Ext.getCmp(nodeid);
                 var tabCmp = Ext.ComponentQuery.query('tabpanel')[0];
                 if (tabItem == null) {
@@ -105,8 +97,10 @@
                     tabCmp.add({
                         id: nodeid,
                         title: nodeName,
-                        closable: true
+                        closable: true,
+                        html: '<iframe width="100%" height="100%" id="defaultPgFrame" src="' + url + '" name="frameContent" frameborder="0"></iframe>'
                     });
+                    tabCmp.setActiveTab(nodeid);
                 } else {
                     //重复点击
                     tabCmp.setActiveTab(tabItem)
@@ -164,7 +158,7 @@
                     region: 'center',
                     plain: true,
                     xtype: 'tabpanel',
-                    activeTab: 3,
+                    activeTab: 0,
                     minTabWidth: 100,
                     items: [
                         {

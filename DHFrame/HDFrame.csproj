@@ -3759,6 +3759,7 @@
     <Content Include="Images\bar4.gif" />
     <Content Include="Images\bar4.jpg" />
     <Content Include="Images\bar4.png" />
+    <Content Include="SysModule\Sysmodule.aspx" />
     <Content Include="Testpage\GridDemo.aspx" />
     <Content Include="Js\ckeditor_full\adapters\jquery.js" />
     <Content Include="Js\ckeditor_full\build-config.js" />
@@ -5489,7 +5490,6 @@
     <Content Include="Js\mxGraph\src\js\mxClient.js" />
     <Content Include="ProductDemo.aspx" />
     <Content Include="Testpage\test.aspx" />
-    <Content Include="TopPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -5515,6 +5515,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="SysModule\Sysmodule.aspx.cs">
+      <DependentUpon>Sysmodule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysModule\Sysmodule.aspx.designer.cs">
+      <DependentUpon>Sysmodule.aspx</DependentUpon>
     </Compile>
     <Compile Include="Testpage\GridDemo.aspx.cs">
       <DependentUpon>GridDemo.aspx</DependentUpon>
@@ -5565,13 +5572,6 @@
     </Compile>
     <Compile Include="Testpage\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TopPage.aspx.cs">
-      <DependentUpon>TopPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TopPage.aspx.designer.cs">
-      <DependentUpon>TopPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
