@@ -33,6 +33,7 @@ namespace HDFrame.SysModule
             Response.End();
         }
 
+        #region 树节点遍历
         private List<NodeObject> GetTree(DataModel.SysModule[] Ent, string ParentID)
         {
             List<NodeObject> list = new List<NodeObject>();
@@ -69,6 +70,8 @@ namespace HDFrame.SysModule
             }
             return list;
         }
+
+        #endregion
     }
 
 
